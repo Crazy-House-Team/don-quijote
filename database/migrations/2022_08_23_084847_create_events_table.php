@@ -15,12 +15,15 @@ return new class extends Migration
     {
         Schema::create('events', function (Blueprint $table) {
             $table->id();
-            $table->string('title', 75);
+            $table->string('title', 100);
             $table->string('resume', 150);
             $table->string('description', 500);
             $table->string('place', 50);
             $table->string('address', 75);
-            $table->string('img', 150);
+            $table->date('date');
+            $table->time('time', 2);
+            $table->string('img', 100);
+            $table->integer('max_participants');
             $table->timestamps();
         });
     }
