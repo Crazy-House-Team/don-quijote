@@ -24,6 +24,7 @@ return new class extends Migration
             $table->time('time', 2);
             $table->string('img', 100);
             $table->integer('max_participants');
+            $table->boolean('favorite');
             $table->timestamps();
         });
     }

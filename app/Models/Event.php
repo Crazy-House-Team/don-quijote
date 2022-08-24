@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Event extends Model
 {
     use HasFactory;
-    
+
     protected $fillable = [
         'title',
         'resume',
@@ -19,5 +19,6 @@ class Event extends Model
         'time',
         'img',
         'max_participants',
+        'favorite'
     ];
 }

@@ -26,6 +26,7 @@ class EventFactory extends Factory
             'time' => $this->faker->time($format = 'H:i'),
             'img' => $this->faker->imageUrl($width = 640, $height = 480),
             'max_participants' => $this->faker->numberBetween($min = 10, $max = 100),
+            'favorite' => false,
         ];
     }
 }

@@ -17,6 +17,9 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
+        Event::factory(5)->create([
+            'favorite' => true,
+        ]);
         Event::factory(15)->create();
     }
 }
