@@ -18,7 +18,7 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         Event::factory()->create([
-            'title' => 'Cocina creativa. Del microhondas al horno',
+            'title' => 'Cocina creativa. Del microondas al horno',
             'favorite' => true,
             'date' => '2024-08-12',
         ]);
