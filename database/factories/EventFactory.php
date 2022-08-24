@@ -22,7 +22,7 @@ class EventFactory extends Factory
             'description' => $this->faker->realText($maxNbChars = 200, $indexSize = 2),
             'place' => $this->faker->company(),
             'address' => $this->faker->streetAddress(),
-            'date' => $this->faker->date($format = 'Y-m-d'),
+            'date' => $this->faker->date($format = 'Y-m-d',$max = '2025-12-31'),
             'time' => $this->faker->time($format = 'H:i'),
             'img' => $this->faker->imageUrl($width = 640, $height = 480),
             'max_participants' => $this->faker->numberBetween($min = 10, $max = 100),
