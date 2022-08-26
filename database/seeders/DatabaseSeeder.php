@@ -33,7 +33,7 @@ class DatabaseSeeder extends Seeder
             'date' => '2023-08-12',
         ]);
         Event::factory()->create([
-            'title' => 'Creación de guiones de palículas',
+            'title' => 'Creación de guiones de películas',
             'favorite' => true,
             'date' => '2025-08-12',
         ]);
