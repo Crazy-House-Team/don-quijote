@@ -5,7 +5,7 @@ namespace Database\Seeders;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 
 use App\Models\Event;
-
+use App\Models\User;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -60,5 +60,18 @@ class DatabaseSeeder extends Seeder
             'favorite' => true,
         ]);
         Event::factory(15)->create();
+
+        User::factory()->create([
+            'name' => 'admin',
+            'email' => 'admin@admin.com',
+        ]);
+        User::factory()->create([
+            'name' => 'user1',
+            'email' => 'user1@user1.com',
+        ]);
+        User::factory()->create([
+            'name' => 'user2',
+            'email' => 'user2@user2.com',
+        ]);
     }
 }

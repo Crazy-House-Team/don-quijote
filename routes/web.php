@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\EventController;
+use App\Http\Controllers\AdminController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -17,9 +18,9 @@ use Illuminate\Support\Facades\Route;
 // Route::get('/', function () {return view('home');});
 Route::get('/', [EventController::class, 'index'])->name('home');
 
-
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::delete('admin/delete/{id}', [EventController::class, 'destroy'])->name('delete');
-Route::get('/admin', [App\Http\Controllers\HomeController::class, 'index'])->name('admin');
+Route::get('/admin', [AdminController::class, 'index'])->name('admin');
+
