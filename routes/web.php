@@ -25,4 +25,4 @@ Auth::routes();
 Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::delete('admin/delete/{id}', [EventController::class, 'destroy'])->name('delete');
 Route::get('/admin', [AdminController::class, 'index'])->name('admin');
-
+Route::get('show/{id}', [EventController::class, 'show'])->name('detail');

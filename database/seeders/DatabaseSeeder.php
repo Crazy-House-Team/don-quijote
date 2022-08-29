@@ -58,8 +58,11 @@ class DatabaseSeeder extends Seeder
 
         Event::factory(5)->create([
             'favorite' => true,
+            'img' => 'https://mdpiblog.wordpress.sciforum.net/wp-content/uploads/sites/4/2018/01/books.jpg',
         ]);
-        Event::factory(15)->create();
+        Event::factory(15)->create([
+            'img' => 'https://www.ukrgate.com/eng/wp-content/uploads/2021/02/The-Ukrainian-Book-Institute-Purchases-380.9-Thousand-Books-for-Public-Libraries1.jpeg',
+        ]);
 
         User::factory()->create([
             'name' => 'admin',

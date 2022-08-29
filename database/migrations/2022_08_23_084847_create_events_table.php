@@ -22,7 +22,7 @@ return new class extends Migration
             $table->string('address', 75);
             $table->date('date');
             $table->time('time', 2);
-            $table->string('img', 100);
+            $table->string('img', 250);
             $table->integer('max_participants');
             $table->boolean('favorite');
             $table->timestamps();
