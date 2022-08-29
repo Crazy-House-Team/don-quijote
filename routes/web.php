@@ -16,11 +16,11 @@ use Illuminate\Support\Facades\Route;
 */
 
 // Route::get('/', function () {return view('home');});
-Route::get('/', [EventController::class, 'index'])->name('home');
+//Route::get('/', [EventController::class, 'index'])->name('home');
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::delete('admin/delete/{id}', [EventController::class, 'destroy'])->name('delete');
 Route::get('/admin', [AdminController::class, 'index'])->name('admin');
 
