@@ -3,7 +3,7 @@
 @section('content')
 <h1>home</h1>
     @include('components.carousel');
-
+<div class="cards-container">
     <h2 class="text-3xl font-bold mb-12 text-center">Eventos activos</h2>
     @foreach ($events as $event)
         @if(!$event->favorite && $event->date > date('Y-m-d'))
@@ -17,4 +17,5 @@
             @include('components.card')
         @endif
     @endforeach
+</div>
 @endsection

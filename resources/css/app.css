@@ -1,2 +1,5 @@
 @import './components/views/home-view.css';
 
+body{
+    max-width: 1200px;
+}
