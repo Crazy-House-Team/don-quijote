@@ -16,7 +16,7 @@ class EventController extends Controller
     {
         //
         $events = Event::get();
-        return view('home',compact('events'));
+        return $events;
     }
 
     /**

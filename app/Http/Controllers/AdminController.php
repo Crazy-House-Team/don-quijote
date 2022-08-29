@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class HomeController extends Controller
+class AdminController extends Controller
 {
     /**
      * Create a new controller instance.
@@ -15,7 +15,6 @@ class HomeController extends Controller
     {
 
     }
-
     /**
      * Show the application dashboard.
      *
@@ -25,7 +24,6 @@ class HomeController extends Controller
     {
         $eventController = new EventController();
         $events = $eventController->index();
-        return view('home',compact('events'));
-
+        return view('admin',compact('events'));
     }
 }
