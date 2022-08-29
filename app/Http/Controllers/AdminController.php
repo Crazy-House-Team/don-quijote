@@ -13,7 +13,7 @@ class AdminController extends Controller
      */
     public function __construct()
     {
-
+        $this->middleware('admin');
     }
     /**
      * Show the application dashboard.
@@ -25,5 +25,11 @@ class AdminController extends Controller
         $eventController = new EventController();
         $events = $eventController->index();
         return view('admin',compact('events'));
+    }
+
+    public function destroy($id) {
+        $eventController = new EventController();
+        $events = $eventController->destroy($id);
+        return view('admin');
     }
 }

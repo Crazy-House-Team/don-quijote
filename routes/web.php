@@ -23,6 +23,13 @@ use Illuminate\Support\Facades\Route;
 Auth::routes();
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
-Route::delete('admin/delete/{id}', [EventController::class, 'destroy'])->name('delete');
-Route::get('/admin', [AdminController::class, 'index'])->name('admin');
+
 Route::get('show/{id}', [EventController::class, 'show'])->name('detail');
+
+Route::group([
+    'middleware' => 'admin',
+    'prefix' => 'admin',
+],function(){
+    Route::get('/', [AdminController::class, 'index'])->name('admin');
+    Route::delete('/delete/{id}', [AdminController::class, 'destroy'])->name('delete');
+});
