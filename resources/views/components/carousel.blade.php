@@ -2,7 +2,7 @@
     <!-- Carousel wrapper -->
     <div class="relative h-56 overflow-hidden rounded-lg md:h-96">
         @foreach ($events as $event)
-            @if($event->favorite)
+            @if($event->favorite && $event->date > date('Y-m-d'))
                 <!-- Item 1 -->
                 <div class="hidden duration-700 ease-in-out" data-carousel-item>
                     <h2>{{$event->title}}<h2>
