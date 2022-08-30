@@ -66,7 +66,12 @@ class AdminController extends Controller
     //  */
     public function update(Request $request, $id)
     {
-        //
+        $event = request()->except(['_token','_method']);
+        //echo('<pre>');
+        //var_dump($event);
+        //echo('</pre>');
+        Event::where('id','=',$id)->update($event);
+        return redirect()->route('admin');
     }
 
 

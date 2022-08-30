@@ -9,17 +9,17 @@
     @csrf
   <div class="mb-6">
     <label for="title" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Título del evento</label>
-    <input maxlength="100" type="text" id="title"  name="title" value="{{$event->title}}" placeholder="class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required="">
+    <input maxlength="100" type="text" id="title"  name="title" value="{{$event->title}}" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required="">
   </div>
 
   <div class="mb-6">
     <label for="resume" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Sinopsis</label>
-    <textarea  rows="4" maxlength="150" id="resume" name="resume" value="{{$event->resume}}" type="text" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required=""></textarea>
+    <textarea  rows="4" maxlength="150" id="resume" name="resume" type="text" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required="">{{$event->resume}}</textarea>
   </div>
 
   <div class="mb-6">
     <label for="description" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Descripción</label>
-    <textarea  rows="4" maxlength="500" id="description" name="description"  value="{{$event->description}}" type="text" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required=""></textarea>
+    <textarea  rows="4" maxlength="500" id="description" name="description" type="text" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required="">{{$event->description}}</textarea>
   </div>
 
   <div class="mb-6">
@@ -29,7 +29,7 @@
 
   <div class="mb-6">
     <label for="address" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Dirección del evento</label>
-    <input maxlength="75" type="text" id="address" name="address"  value="{{$event->address}}" placeholder="class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required="">
+    <input maxlength="75" type="text" id="address" name="address"  value="{{$event->address}}" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required="">
   </div>
 
 
