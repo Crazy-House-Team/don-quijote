@@ -1,7 +1,10 @@
 @extends('layouts.app')
 
 @section('content')
+
+@include('components.header');
 <h1>home</h1>
+    
     @include('components.carousel');
 
     <h2 class="text-3xl font-bold mb-12 text-center">Eventos activos</h2>
@@ -17,4 +20,8 @@
             @include('components.card')
         @endif
     @endforeach
+
+    @include('components.footer');
+
+
 @endsection
