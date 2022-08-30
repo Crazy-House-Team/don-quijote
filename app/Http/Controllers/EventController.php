@@ -26,7 +26,7 @@ class EventController extends Controller
      */
     public function create()
     {
-        //
+     return view('newEvent');
     }
 
     /**
@@ -37,7 +37,28 @@ class EventController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $event= request()->except("_token");
+
+        if($request->favorite == 'on'){
+            $favorite = true;
+        }else{
+            $favorite = false;
+        }
+
+        $event= Event::create ([
+            'title'=>$request->title,
+            'resume'=>$request->resume,
+            'description'=>$request->description,
+            'place'=>$request->place,
+            'address'=>$request->address,
+            'date'=>date('Y-m-d', strtotime($request->date)),
+            'time'=>date('H:i:s', strtotime($request->time)),
+            'img' =>$request->img,
+            'max_participants'=>intval($request->max_participants),
+            'favorite' =>$favorite
+        ]);
+    
+        return redirect()->route('home');
     }
 
     /**

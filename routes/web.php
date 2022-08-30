@@ -33,3 +33,6 @@ Route::group([
     Route::get('/', [AdminController::class, 'index'])->name('admin');
     Route::delete('/delete/{id}', [AdminController::class, 'destroy'])->name('delete');
 });
+
+Route::get('/create',[EventController::class, 'create'])->name('createEvent');
+Route::post('/',[EventController::class, 'store'])->name('storeEvent');
