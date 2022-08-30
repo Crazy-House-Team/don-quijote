@@ -32,4 +32,14 @@ class AdminController extends Controller
         $events = $eventController->destroy($id);
         return view('admin');
     }
+
+    public function create() {
+        return view('newEvent');
+    }
+
+    public function store(Request $request) {
+        $eventController = new EventController();
+        $events = $eventController->store($request);
+        return redirect()->route('admin');
+    }
 }

@@ -17,15 +17,19 @@ class EventControllerIndexTest extends TestCase
 
     use RefreshDatabase;
 
-    public function test_list_events_appear_in_homepage()
-    { 
-        $events = Event::factory(2)->create();
-        $event = $events[0];
+    public function test_homepage_route_is_charging()
+    {
 
         $response = $this->get('/');
         $response->assertStatus(200)->assertSee('home');
+    }
 
-        
-        
+    public function test_all_events_are_listed_in_home_page()
+    {
+        $events = Event::factory()->create([
+            "title" => "title-test",
+        ]);
+        $response = $this->get(route('home'));
+        $response->assertStatus(200)->assertSee('title-test');
     }
 }

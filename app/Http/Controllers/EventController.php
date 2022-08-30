@@ -57,8 +57,8 @@ class EventController extends Controller
             'max_participants'=>intval($request->max_participants),
             'favorite' =>$favorite
         ]);
-    
-        return redirect()->route('home');
+
+       // return redirect()->route('home');
     }
 
     /**

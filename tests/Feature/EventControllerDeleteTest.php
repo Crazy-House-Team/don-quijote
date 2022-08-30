@@ -31,14 +31,14 @@ class EventControllerDeleteTest extends TestCase
 
     public function test_events_can_be_deleted_by_admin()
     {
-        $user = User::factory()->create([
+        $admin = User::factory()->create([
             'is_admin' => true,
         ]);
         $event = Event::factory()->create();
 
         $this->assertCount(1, Event::all());
 
-        $response = $this->actingAs($user)->delete(\route('delete', $event->id));
+        $response = $this->actingAs($admin)->delete(\route('delete', $event->id));
 
         $this->assertCount(0, Event::all());
 
