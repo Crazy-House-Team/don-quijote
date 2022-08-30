@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Models\Event;
+use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class EventController extends Controller
 {
@@ -15,7 +17,7 @@ class EventController extends Controller
     public function index()
     {
         //
-        $events = Event::select()->where('date', '>',\getdate())->orderBy('date', 'asc')->get();
+        $events = Event::select()->where('date', '>', \getdate())->orderBy('date', 'asc')->get();
         return $events;
     }
 
@@ -107,4 +109,30 @@ class EventController extends Controller
     {
         Event::destroy($id);
     }
+
+    public function suscribe($id)
+    {
+        $user = User::find(Auth::id());
+        $event = Event::find($id);
+
+        $user->events()->attach($event);
+    }
+
+    public function unsuscribe($id)
+    {
+        $user = User::find(Auth::id());
+        $event = Event::find($id);
+
+        $user->events()->detach($event);
+    }
+
+    public function getSuscriptions()
+    {
+        $user = User::find(Auth::id());
+
+        $events = $user->events;
+        return $events;
+    }
+
+
 }
