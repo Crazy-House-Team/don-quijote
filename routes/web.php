@@ -34,5 +34,9 @@ Route::group([
     Route::post('/',[AdminController::class, 'store'])->name('storeEvent');
     Route::delete('/delete/{id}', [AdminController::class, 'destroy'])->name('delete');
     Route::get('/create',[AdminController::class, 'create'])->name('createEvent');
+    Route::get('/edit/{id}', [AdminController::class, 'edit'])->name('editEvent');
+    Route::patch('/event/{id}', [AdminController::class, 'update'])->name('updateEvent');
+    
+
 });
 

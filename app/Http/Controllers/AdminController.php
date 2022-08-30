@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Event;
 use Illuminate\Http\Request;
 
 class AdminController extends Controller
@@ -42,4 +43,31 @@ class AdminController extends Controller
         $events = $eventController->store($request);
         return redirect()->route('admin');
     }
+
+    // /**
+    //  * Show the form for editing the specified resource.
+    //  *
+    //  * @param  int  $id
+    //  * @return \Illuminate\Http\Response
+    //  */
+    public function edit($id)
+    { 
+        $event = Event::find($id);
+        return view('editEvent',compact('event'));
+
+    }
+
+    // /**
+    //  * Update the specified resource in storage.
+    //  *
+    //  * @param  \Illuminate\Http\Request  $request
+    //  * @param  int  $id
+    //  * @return \Illuminate\Http\Response
+    //  */
+    public function update(Request $request, $id)
+    {
+        //
+    }
+
+
 }
