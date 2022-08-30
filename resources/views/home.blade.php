@@ -2,7 +2,7 @@
 
 @section('content')
 
-@include('components.header');
+
 <h1>home</h1>
     
     @include('components.carousel');
