@@ -47,7 +47,7 @@ class DatabaseSeeder extends Seeder
         Event::factory()->create([
             'title' => 'Iniciación a la programación',
             'favorite' => false,
-            'date' => '2025-08-12',
+            'date' => '2022-09-03',
         ]);
 
         Event::factory()->create([
