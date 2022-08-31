@@ -5,8 +5,8 @@
         <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">{{$event->resume}}</p>
 
         @if(isset($suscribed) && !$suscribed && $event->date > date('Y-m-d'))
-        <button type="button" class="inline-flex items-center py-2 px-3 w-36 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-            <a href="{{ route('suscribe', $event->id) }}">Me apunto</a>
+        <button type="button" class="bg-green-400 hover:bg-green-700 text-white font-bold py-2 px-4 rounded">
+            <a href="{{ route('suscribe', $event->id) }}" class='text-white font-bold'>Me apunto</a>
         </button>
         @endif
         <a href="{{ route('detail',$event->id) }}" class="inline-flex items-center">

@@ -2,13 +2,10 @@
 
 @section('content')
 
-
-<h1>home</h1>
 @include('components.carousel');
 
 <h2 class="text-3xl font-bold mb-12 text-center">Eventos activos</h2>
 <div class="cards-container">
-
 
     @foreach ($events as $event)
         @if(!$event->favorite && $event->date > date('Y-m-d') && Auth::check())
@@ -23,7 +20,9 @@
             @include('components.card')
         @endif
     @endforeach
-
+</div>
+<h2 class="text-3xl font-bold mb-12 text-center">Eventos pasados</h2>
+<div class="cards-container">
 
     @foreach ($events as $event)
         @if($event->date <= date('Y-m-d'))
