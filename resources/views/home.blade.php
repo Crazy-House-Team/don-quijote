@@ -26,9 +26,9 @@
 
 
     @foreach ($events as $event)
-    @if($event->date <= date('Y-m-d'))
-    @include('components.card')
-    @endif
+        @if($event->date <= date('Y-m-d'))
+            @include('components.card')
+        @endif
     @endforeach
 </div>
 @endsection

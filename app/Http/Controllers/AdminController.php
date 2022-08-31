@@ -44,12 +44,6 @@ class AdminController extends Controller
         return redirect()->route('admin');
     }
 
-    // /**
-    //  * Show the form for editing the specified resource.
-    //  *
-    //  * @param  int  $id
-    //  * @return \Illuminate\Http\Response
-    //  */
     public function edit($id)
     { 
         $event = Event::find($id);
@@ -57,13 +51,6 @@ class AdminController extends Controller
 
     }
 
-    // /**
-    //  * Update the specified resource in storage.
-    //  *
-    //  * @param  \Illuminate\Http\Request  $request
-    //  * @param  int  $id
-    //  * @return \Illuminate\Http\Response
-    //  */
     public function update(Request $request, $id)
     {
         $event = request()->except(['_token','_method']);
@@ -86,13 +73,6 @@ class AdminController extends Controller
             'max_participants' => intval($request->max_participants),
             'favorite' => $favorite]);
         
-            /*
-            echo('<pre>');
-                var_dump($event);
-            echo('</pre>');
-            */
-
-
             Event::where('id','=',$id)->update($event);
             return redirect()->route('admin');
         
