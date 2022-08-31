@@ -22,17 +22,25 @@ use Illuminate\Support\Facades\Route;
 
 Auth::routes();
 
+//Any User
 Route::get('/', [HomeController::class, 'index'])->name('home');
+Route::get('show/{id}', [HomeController::class, 'show'])->name('detail');
 
-Route::get('show/{id}', [EventController::class, 'show'])->name('detail');
+//Only logged Users
+Route::group([
+    'middleware' => 'auth',
+], function () {
+    Route::get('suscribe/{id}', [HomeController::class, 'suscribe'])->name('suscribe');
+    Route::get('unsuscribe/{id}', [HomeController::class, 'unsuscribe'])->name('unsuscribe');
+});
 
+// Only Admins
 Route::group([
     'middleware' => 'admin',
     'prefix' => 'admin',
-],function(){
+], function () {
     Route::get('/', [AdminController::class, 'index'])->name('admin');
-    Route::post('/',[AdminController::class, 'store'])->name('storeEvent');
+    Route::post('/', [AdminController::class, 'store'])->name('storeEvent');
     Route::delete('/delete/{id}', [AdminController::class, 'destroy'])->name('delete');
-    Route::get('/create',[AdminController::class, 'create'])->name('createEvent');
+    Route::get('/create', [AdminController::class, 'create'])->name('createEvent');
 });
-

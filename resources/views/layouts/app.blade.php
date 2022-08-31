@@ -7,7 +7,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>{{ config('app.name', 'Don Quijote') }}</title>
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com"> 
@@ -21,7 +21,7 @@
 </head>
 <body>
     <div id="app">
-        @include('components.header');
+        @include('components.header')
 
         <main class="py-4">
             @yield('content')
