@@ -32,6 +32,8 @@ Route::group([
 ], function () {
     Route::get('suscribe/{id}', [HomeController::class, 'suscribe'])->name('suscribe');
     Route::get('unsuscribe/{id}', [HomeController::class, 'unsuscribe'])->name('unsuscribe');
+    Route::get('suscriptions', [HomeController::class, 'getSuscriptions'])->name('suscriptions');
+
 });
 
 // Only Admins

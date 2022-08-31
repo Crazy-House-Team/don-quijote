@@ -64,4 +64,11 @@ class HomeController extends Controller
         $events = $eventController->unsuscribe($id);
         return \redirect()->route('home');
     }
+
+    public function getSuscriptions() {
+        $eventController = new EventController();
+        $events = $eventController->getSuscriptions();
+
+        return \view('myEvents', \compact('events'));
+    }
 }
