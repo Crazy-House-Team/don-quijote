@@ -14,8 +14,18 @@
                   <a class="nav-link" href="{{ route('home') }}">Home</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="{{ route('suscriptions') }}">Mis Eventos</a>
+                  <a class="nav-link" href="{{ route('suscriptions') }}">Eventos pasados</a>
                 </li>
+                @if (Auth::check())
+                <li class="nav-item">
+                  <a class="nav-link" href="{{ route('suscriptions') }}">Mis eventos</a>
+                </li>
+                @endif
+                @if (Auth::check() && Auth::user()->is_admin)
+                <li class="nav-item">
+                  <a class="nav-link" href="{{ route('admin') }}">Panel de administración</a>
+                </li>
+                @endif
             </ul>
 
             <!-- Right Side Of Navbar -->
