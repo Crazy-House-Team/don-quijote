@@ -1,2 +1,9 @@
 @import './components/views/home-view.css';
 
+body{
+  
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
