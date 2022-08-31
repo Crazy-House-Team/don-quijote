@@ -24,14 +24,14 @@ Auth::routes();
 
 //Any User
 Route::get('/', [HomeController::class, 'index'])->name('home');
-Route::get('show/{id}', [EventController::class, 'show'])->name('detail');
+Route::get('show/{id}', [HomeController::class, 'show'])->name('detail');
 
 //Only logged Users
 Route::group([
     'middleware' => 'auth',
 ], function () {
-    Route::get('suscribe/{id}', [EventController::class, 'suscribe'])->name('suscribe');
-    Route::get('unsuscribe/{id}', [EventController::class, 'unsuscribe'])->name('unsuscribe');
+    Route::get('suscribe/{id}', [HomeController::class, 'suscribe'])->name('suscribe');
+    Route::get('unsuscribe/{id}', [HomeController::class, 'unsuscribe'])->name('unsuscribe');
 });
 
 // Only Admins

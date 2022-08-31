@@ -27,18 +27,41 @@ class HomeController extends Controller
     {
         $eventController = new EventController();
         $events = $eventController->index();
-
-        return view('home', compact('events'));
+        $suscriptions = $eventController->getSuscriptions();
+        return view('home', compact('events', 'suscriptions'));
     }
 
-    public static function checkUser($event) {
-        $userExists = false;
-        foreach ($event->users as $user) {
-            if(Auth::id() == $user->id) {
-                $userExists = true;
+    public function show($id)
+    {
+        $eventController = new EventController();
+        $event = $eventController->show($id);
+        $suscriptions = $eventController->getSuscriptions();
+        return view('detail', compact('event', 'suscriptions'));
+    }
+
+    public function suscribe($id)
+    {
+        $suscribed = false;
+        $eventController = new EventController();
+        $suscriptions = $eventController->getSuscriptions();
+
+        foreach ($suscriptions as $suscription) {
+            if ($suscription->id == $id) {
+                $suscribed = true;
             }
         }
 
-        return $userExists;
+        if (!$suscribed) {
+            $events = $eventController->suscribe($id);
+        }
+
+        return \redirect()->route('home');
+    }
+
+    public function unsuscribe($id)
+    {
+        $eventController = new EventController();
+        $events = $eventController->unsuscribe($id);
+        return \redirect()->route('home');
     }
 }

@@ -71,9 +71,8 @@ class EventController extends Controller
      */
     public function show($id)
     {
-        //
         $event = Event::find($id);
-        return view('detail', compact('event'));
+        return $event;
     }
 
     /**
@@ -133,6 +132,5 @@ class EventController extends Controller
         $events = $user->events;
         return $events;
     }
-
 
 }
