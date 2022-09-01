@@ -43,37 +43,3 @@
     </div>
 </div>
 
-<!-- PRUEBA DE NUEVA TARJETICA  
-
-
-<div class="flex flex-col items-center bg-white rounded-lg border shadow-md md:flex-row md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
-    <img class="object-cover w-full h-96 rounded-t-lg md:h-auto md:w-48 md:rounded-none md:rounded-l-lg" src="{{$event->img}}" alt="">
-    <div class="flex flex-col justify-between p-4 leading-normal">
-        <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{{$event->title}}</h5>
-        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">{{$event->resume}}</p>
-        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">{{$event->description}}</p>
-        <p class="mb-2 text-gray-500 dark:text-gray-400">
-                <span class="text-gray-700 font-bold dark:text-gray-400">Lugar: </span> {{ $event->place }}
-            </p>
-            <p class="mb-2 text-gray-500 dark:text-gray-400">
-                <span class="text-gray-700 font-bold dark:text-gray-400">Dirección: </span> {{ $event->address }}
-            </p>
-            <p class="mb-2 text-gray-500 dark:text-gray-400">
-                <span class="text-gray-700 font-bold dark:text-gray-400">Fecha y hora: </span> {{ $event->date }} a las {{ date('H:i', strtotime($event->time)) }}
-            </p>
-            <p class="mb-2 text-gray-500 dark:text-gray-400">
-                <span class="text-gray-700 font-bold dark:text-gray-400">Destacado :  </span>
-                <input type="checkbox" id='default-toggle-{{$event->id}}' disabled {{($event->favorite == true ? 'checked' : '')}} >
-            </p>                               
-            <div>
-            <button  type="button" class="bg-blue-500 hover:bg-blue-700 py-2 px-4 rounded" style="width:120px; display:inline-block;">
-                <a href="{{route('delete',$event->id)}}" class='text-white font-bold'>Borrar</a>
-            </button>
-
-            <button  type="button" class="bg-blue-500 hover:bg-blue-700 py-2 px-4 rounded" style='width:120px; display:inline-block;'>
-                <a href="{{route('editEvent',$event->id)}}" class='text-white font-bold'>Modificar</a>
-            </button>
-            </div>
-    </div>
-</div>
--->
