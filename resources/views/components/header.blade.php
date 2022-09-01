@@ -14,7 +14,7 @@
                   <a class="nav-link" href="{{ route('home') }}">Home</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="{{ route('suscriptions') }}">Eventos pasados</a>
+                  <a class="nav-link" href="{{ route('pastEvents') }}">Eventos pasados</a>
                 </li>
                 @if (Auth::check())
                 <li class="nav-item">

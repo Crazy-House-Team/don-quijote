@@ -25,6 +25,7 @@ Auth::routes();
 //Any User
     Route::get('/', [HomeController::class, 'index'])->name('home');
     Route::get('show/{id}', [HomeController::class, 'show'])->name('detail');
+    Route::get('/old', [HomeController::class, 'old'])->name('pastEvents');
 
 //Only logged Users
 Route::group([
