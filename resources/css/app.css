@@ -1,5 +1,6 @@
 @import './components/views/home-view.css';
 @import './components/auth/login-form.css';
+@import './components/auth/register-form.css';
 
 body{
   

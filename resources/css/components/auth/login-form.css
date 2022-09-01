@@ -1,25 +1,32 @@
 
 
 .login-container{
-    margin-top: 60px;
+    max-height: 60vw;
+    margin: auto;
+    padding: auto;
     
     
 }
 
 .card-body{
-    height: 450px;
-
-
-}
-
-form{
-
-    margin-top: 60px;
+    height: 580px;
+    max-height: 40vw;
     
 
+
 }
-
-.py-4{
-
-    margin-top: 60px;
+.image-login{
+    height: 720px;
+    width: 360px;
+    min-block-size: auto;
+    left: 120px;
+    max-block-size: 40%;
+}
+.image-login>img{
+    width: 100%;
+}
+.form-login{
+    margin-left: 100px;
+    width: 100%;
+    
 }
