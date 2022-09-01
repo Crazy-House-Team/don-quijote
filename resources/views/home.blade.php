@@ -11,7 +11,7 @@
 @include('components.carousel')
 
 <h2 class="text-3xl font-bold mb-12 text-center">Próximos eventos</h2>
-<div class="cards-container">
+<div class="grid grid-cols-1 gap-4 md:grid-cols-2  auto-rows-max">
 
     @foreach ($events as $event)
         @if(!$event->favorite && $event->date > date('Y-m-d'))
