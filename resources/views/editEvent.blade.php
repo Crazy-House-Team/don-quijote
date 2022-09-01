@@ -2,7 +2,7 @@
 
 @section('content')
 
-<h1>nuevo evento</h1>
+<h1 class="block bg-blue-200 py-1 px-1 rounded ">Nuevo evento</h1>
 
 <form action="{{route('updateEvent', $event->id)}}" method = 'post'>
     @method("PATCH")
@@ -54,13 +54,15 @@
   </div>
 
   <div class="mb-6">
-    <label for="favorite" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300 dark:text-gray-300">Evento destacado</label>
-    <input type="checkbox" {{($event->favorite == true ? 'checked' : '')}} id="favorite" name="favorite" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+    <label for="favorite" class="mb-2 text-sm font-medium text-gray-900 dark:text-gray-300 pr-4">Evento destacado</label>
+    <input type="checkbox" {{($event->favorite == true ? 'checked' : '')}} 
+    id="favorite" name="favorite" 
+    class="bg-gray-50 border border-gray-300 rounded-lg w-4 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
   </div>
  
-  <div class="flex items-start mb-6">
-  <button type="submit" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Guardar</button>
-  <button type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+  <div class="flex justify-center">
+  <button type="submit" class="mr-4 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Guardar</button>
+  <button type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
     <a href= "{{route('admin')}}" class='text-white font-bold'>Cancelar </a>
   </button>
   </div>
