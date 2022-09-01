@@ -2,6 +2,8 @@
 
 @section('content')
 
+<div class="w-auto border-2 border-gray-300 p-2.5 rounded dark:border-gray-700 ">
+
 <h1 class="block bg-blue-200 py-1 px-1 rounded ">Nuevo evento</h1>
 
 <form action="{{route('updateEvent', $event->id)}}" method = 'post'>
@@ -32,17 +34,17 @@
     <input maxlength="75" type="text" id="address" name="address"  value="{{$event->address}}" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required="">
   </div>
 
-
+<div class="flex justify-start ">
   <div class="mb-6">
-    <label for="date" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Fecha del evento</label>
-    <input type="date" id="date" name="date" value="{{$event->date}}" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required="">
-  </div>
+    <label for="date" class=" block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Fecha del evento</label>
+    <input type="date" id="date" name="date" value="{{$event->date}}" class="w-48 pr-4 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required="">
+    </div>
 
-  <div class="mb-6">
+    <div class="mb-6">
     <label for="time" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Hora del evento</label>
-    <input type="time" id="time" name="time" value="{{$event->time}}" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required="">
+    <input type="time" id="time" name="time" value="{{$event->time}}" class=" w-48 pl-4 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required="">
   </div>
-
+</div>
   <div class="mb-6">
     <label for="img" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Imagen del evento</label>
     <input maxlength="250" type="text" id="img" name="img" value="{{$event->img}}" placeholder="Imagen del evento" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required="">
@@ -50,7 +52,7 @@
 
   <div class="mb-6">
     <label for="max_participants" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Maximo de participantes</label>
-    <input type="number" id="max_participants" name="max_participants" value="{{$event->max_participants}}" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required="">
+    <input type="number" id="max_participants" name="max_participants" value="{{$event->max_participants}}" class="w-48 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required="">
   </div>
 
   <div class="mb-6">
@@ -67,6 +69,7 @@
   </button>
   </div>
 </form>
+</div>
 
 
 @endsection
