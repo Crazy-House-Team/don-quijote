@@ -29,7 +29,7 @@ class EventControllerIndexTest extends TestCase
         $events = Event::factory()->create([
             "title" => "title-test",
         ]);
-        $response = $this->get(route('home'));
+        $response = $this->get('/');
         $response->assertStatus(200)->assertSee('title-test');
     }
 }

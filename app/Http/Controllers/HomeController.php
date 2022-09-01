@@ -48,7 +48,10 @@ class HomeController extends Controller
     {
         $eventController = new EventController();
         $event = $eventController->show($id);
-        $suscriptions = $eventController->getSuscriptions();
+        if (Auth::check()) {
+            $suscriptions = $eventController->getSuscriptions();
+        }
+        $suscriptions = [];
         return view('detail', compact('event', 'suscriptions'));
     }
 
