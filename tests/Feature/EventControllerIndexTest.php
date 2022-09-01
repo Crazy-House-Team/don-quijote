@@ -21,7 +21,7 @@ class EventControllerIndexTest extends TestCase
     {
 
         $response = $this->get('/');
-        $response->assertStatus(200)->assertSee('home');
+        $response->assertStatus(200)->assertSee('Asociación Cultural Don Quijote');
     }
 
     public function test_all_events_are_listed_in_home_page()
