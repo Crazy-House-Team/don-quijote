@@ -5,7 +5,9 @@
 @php $suscribed = false @endphp
 
 @foreach( $suscriptions as $suscription )
-    @php $suscribed = true @endphp
+    @if($suscription->id == $event->id)
+        @php $suscribed = true @endphp
+    @endif
 @endforeach
 
 
@@ -18,12 +20,12 @@
         <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Lugar del evento : {{$event->address}} - {{$event->place}}</p>
         <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Fecha y hora : 📅 {{$event->date}} / ⏰ {{$event->time}}</p>
         <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">{{$event->max_participants - count($suscriptions)}} plazas disponibles</p>
-        @if(!$suscribed && $event->date > date('Y-m-d'))
+        @if(isset($suscribed) && !$suscribed && $event->date > date('Y-m-d'))
         <a href="{{route('suscribe', $event->id)}}" class="bg-green-400 hover:bg-green-700 text-white font-bold py-2 px-4 rounded">
             Me apunto
         </a>
         @endif
-        @if($suscribed && $event->date > date('Y-m-d'))
+        @if(isset($suscribed) && $suscribed && $event->date > date('Y-m-d'))
         <a href="{{ route('unsuscribe', $event->id) }}" class="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-red-700 rounded-lg hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-800">
             Ya no quiero ir
         </a>

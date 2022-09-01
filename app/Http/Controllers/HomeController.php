@@ -27,10 +27,10 @@ class HomeController extends Controller
     {
         $eventController = new EventController();
         $events = $eventController->index();
+        $suscriptions = [];
         if (Auth::check()) {
             $suscriptions = $eventController->getSuscriptions();
         }
-        $suscriptions = [];
         return view('home', compact('events', 'suscriptions'));
     }
 
@@ -48,10 +48,10 @@ class HomeController extends Controller
     {
         $eventController = new EventController();
         $event = $eventController->show($id);
+        $suscriptions = [];
         if (Auth::check()) {
             $suscriptions = $eventController->getSuscriptions();
         }
-        $suscriptions = [];
         return view('detail', compact('event', 'suscriptions'));
     }
 
@@ -71,14 +71,15 @@ class HomeController extends Controller
             $events = $eventController->suscribe($id);
         }
 
-        return \redirect()->route('home');
+
+        return \redirect()->back();
     }
 
     public function unsuscribe($id)
     {
         $eventController = new EventController();
         $events = $eventController->unsuscribe($id);
-        return \redirect()->route('home');
+        return \redirect()->back();
     }
 
     public function getSuscriptions()
