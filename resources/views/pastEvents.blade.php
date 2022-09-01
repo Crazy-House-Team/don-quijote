@@ -2,7 +2,7 @@
 
 @section('content')
     
-<h2 class="text-3xl font-bold mb-12 text-center">Eventos pasados</h2>
+<h2 class="text-white text-start bg-primary mt-6 mb-6 pt-2 pb-2 ps-2 ">Eventos pasados</h2>
 <div class="cards-container">
     @foreach ($events as $event)
         @if($event->date <= date('Y-m-d'))

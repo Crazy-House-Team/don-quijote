@@ -26,14 +26,14 @@
                     <form action="{{route('delete',$event->id)}}" method="post">
                         @method('delete')
                         @csrf
-                        <button type="submit" class="bg-blue-500 hover:bg-blue-700 py-2 px-4 rounded">
+                        <button type="submit" class=" text-white bg-blue-400 hover:bg-blue-700 text-white font-bold w-24 py-2 px-2 rounded">
                             Borrar
                         </button>
-                        <button type="button" class="bg-blue-500 hover:bg-blue-700 py-2 px-4 rounded">
-                            <a href="{{route('editEvent',$event->id)}}" class='text-white font-bold'>Modificar</a>
+                        <button type="button" class="bg-blue-400 hover:bg-blue-700 text-white font-bold py-2 px-2 rounded w-24">
+                            <a href="{{route('editEvent',$event->id)}}" class='visited:no-underline link:no-underline active:no-underline no-underline hover:no-underline text-white font-bold '>Modificar</a>
                         </button>
                         <label for="default-toggle-{{$event->id}}" class="inline-flex relative items-center cursor-pointer">
-                        <span class="ml-3 text-sm font-medium text-gray-900 dark:text-gray-300">Destacado </span>
+                        <span >Destacado </span>
                         <input type="checkbox" id='default-toggle-{{$event->id}}' disabled {{($event->favorite == true ? 'checked' : '')}}>
                     </label>
                     </form>

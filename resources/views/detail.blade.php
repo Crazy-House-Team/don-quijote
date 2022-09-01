@@ -18,10 +18,10 @@
         <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{{$event->title}}</h5>
         <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">{{$event->description}}</p>
         <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Lugar del evento : {{$event->address}} - {{$event->place}}</p>
-        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Fecha y hora : 📅 {{$event->date}} / ⏰ {{$event->time}}</p>
+        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Fecha y hora : 📅 {{ date('d-m-Y',strtotime($event->date)) }} / ⏰ {{date('H:i', strtotime($event->time))}}</p>
         <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">{{$event->max_participants - count($suscriptions)}} plazas disponibles</p>
         @if(isset($suscribed) && !$suscribed && $event->date > date('Y-m-d'))
-        <a href="{{route('suscribe', $event->id)}}" class="bg-green-400 hover:bg-green-700 text-white font-bold py-2 px-4 rounded">
+        <a href="{{route('suscribe', $event->id)}}" class="bg-blue-400 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
             Me apunto
         </a>
         @endif
