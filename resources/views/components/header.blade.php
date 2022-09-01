@@ -10,15 +10,28 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <!-- Left Side Of Navbar -->
             <ul class="navbar-nav me-auto">
-
+                <li class="nav-item">
+                  <a class="nav-link" href="{{ route('home') }}">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="{{ route('pastEvents') }}">Eventos pasados</a>
+                </li>
+                @if (Auth::check())
+                <li class="nav-item">
+                  <a class="nav-link" href="{{ route('suscriptions') }}">Mis eventos</a>
+                </li>
+                @endif
+                @if (Auth::check() && Auth::user()->is_admin)
+                <li class="nav-item">
+                  <a class="nav-link" href="{{ route('admin') }}">Panel de administración</a>
+                </li>
+                @endif
             </ul>
 
             <!-- Right Side Of Navbar -->
             <ul class="navbar-nav ms-auto">
                 <!-- Authentication Links -->
-                <li class="nav-item">
-                  <a class="nav-link" href="{{ route('home') }}">Home</a>
-                </li>
+
                 @guest
                     @if (Route::has('login'))
                         <li class="nav-item">

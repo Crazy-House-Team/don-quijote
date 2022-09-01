@@ -21,4 +21,9 @@ class Event extends Model
         'max_participants',
         'favorite'
     ];
+
+    public function users()
+    {
+        return $this->belongsToMany(User::class);
+    }
 }

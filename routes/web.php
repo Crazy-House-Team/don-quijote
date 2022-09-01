@@ -22,10 +22,21 @@ use Illuminate\Support\Facades\Route;
 
 Auth::routes();
 
-Route::get('/', [HomeController::class, 'index'])->name('home');
+//Any User
+    Route::get('/', [HomeController::class, 'index'])->name('home');
+    Route::get('show/{id}', [HomeController::class, 'show'])->name('detail');
+    Route::get('/old', [HomeController::class, 'old'])->name('pastEvents');
 
-Route::get('show/{id}', [EventController::class, 'show'])->name('detail');
+//Only logged Users
+Route::group([
+    'middleware' => 'auth',
+], function () {
+    Route::get('suscribe/{id}', [HomeController::class, 'suscribe'])->name('suscribe');
+    Route::get('unsuscribe/{id}', [HomeController::class, 'unsuscribe'])->name('unsuscribe');
+    Route::get('suscriptions', [HomeController::class, 'getSuscriptions'])->name('suscriptions');
+});
 
+// Only Admins
 Route::group([
     'middleware' => 'admin',
     'prefix' => 'admin',
@@ -34,5 +45,9 @@ Route::group([
     Route::post('/',[AdminController::class, 'store'])->name('storeEvent');
     Route::delete('/delete/{id}', [AdminController::class, 'destroy'])->name('delete');
     Route::get('/create',[AdminController::class, 'create'])->name('createEvent');
+    Route::get('/edit/{id}', [AdminController::class, 'edit'])->name('editEvent');
+    Route::patch('/event/{id}', [AdminController::class, 'update'])->name('updateEvent');
+
+
 });
 
