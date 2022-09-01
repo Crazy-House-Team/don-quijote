@@ -13,9 +13,10 @@
 <div class="cards-container">
 
     @foreach ($events as $event)
-        @if(!$event->favorite && $event->date > date('Y-m-d') && Auth::check())
-            @php $suscribed = false @endphp
-
+        @if(!$event->favorite && $event->date > date('Y-m-d'))
+            @if(Auth::check())
+                @php $suscribed = false @endphp
+            @endif
             @foreach( $suscriptions as $suscription )
                 @if($suscription->id == $event->id)
                     @php $suscribed = true @endphp
