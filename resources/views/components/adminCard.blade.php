@@ -20,26 +20,28 @@
             <p class="mb-2 text-gray-500 dark:text-gray-400">
                 <span class="text-gray-700 font-bold dark:text-gray-400">Fecha y hora: </span> {{ $event->date }} a las {{ $event->time }}.
             </p>
-        
-        <div>
-            <button  type="button" class="bg-blue-500 hover:bg-blue-700 py-2 px-4 rounded">
-                <a href="{{route('delete',$event->id)}}" class='text-white font-bold'>Borrar</a>
-            </button>
 
-            <button  type="button" class="bg-blue-500 hover:bg-blue-700 py-2 px-4 rounded">
-                <a href="{{route('editEvent',$event->id)}}" class='text-white font-bold'>Modificar</a>
-            </button>
-            
-            <label for="default-toggle-{{$event->id}}" class="inline-flex relative items-center cursor-pointer">
-                <span class="ml-3 text-sm font-medium text-gray-900 dark:text-gray-300">Destacado </span>
-                <input type="checkbox" id='default-toggle-{{$event->id}}' disabled {{($event->favorite == true ? 'checked' : '')}} >               
-            </label>
-        </div>
+            <div>
+                <form action="{{route('delete',$event->id)}}" method="post">
+                    @method('delete')
+                    @csrf
+                    <button type="submit" class="bg-blue-500 hover:bg-blue-700 py-2 px-4 rounded">
+                        Borrar
+                    </button>
+                    <button type="button" class="bg-blue-500 hover:bg-blue-700 py-2 px-4 rounded">
+                        <a href="{{route('editEvent',$event->id)}}" class='text-white font-bold'>Modificar</a>
+                    </button>
+                    <label for="default-toggle-{{$event->id}}" class="inline-flex relative items-center cursor-pointer">
+                    <span class="ml-3 text-sm font-medium text-gray-900 dark:text-gray-300">Destacado </span>
+                    <input type="checkbox" id='default-toggle-{{$event->id}}' disabled {{($event->favorite == true ? 'checked' : '')}}>
+                </label>
+                </form>
+            </div>
         </div>
     </div>
 </div>
 
-<!-- PRUEBA DE NUEVA TARJETICA  
+<!-- PRUEBA DE NUEVA TARJETICA
 
 
 <div class="flex flex-col items-center bg-white rounded-lg border shadow-md md:flex-row md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
@@ -60,7 +62,7 @@
             <p class="mb-2 text-gray-500 dark:text-gray-400">
                 <span class="text-gray-700 font-bold dark:text-gray-400">Destacado :  </span>
                 <input type="checkbox" id='default-toggle-{{$event->id}}' disabled {{($event->favorite == true ? 'checked' : '')}} >
-            </p>                               
+            </p>
             <div>
             <button  type="button" class="bg-blue-500 hover:bg-blue-700 py-2 px-4 rounded" style="width:120px; display:inline-block;">
                 <a href="{{route('delete',$event->id)}}" class='text-white font-bold'>Borrar</a>

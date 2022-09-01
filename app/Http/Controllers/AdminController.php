@@ -31,7 +31,7 @@ class AdminController extends Controller
     public function destroy($id) {
         $eventController = new EventController();
         $events = $eventController->destroy($id);
-        return view('admin');
+        return \redirect()->back();
     }
 
     public function create() {
@@ -45,7 +45,7 @@ class AdminController extends Controller
     }
 
     public function edit($id)
-    { 
+    {
         $event = Event::find($id);
         return view('editEvent',compact('event'));
 
@@ -54,7 +54,7 @@ class AdminController extends Controller
     public function update(Request $request, $id)
     {
         $event = request()->except(['_token','_method']);
-        
+
         if ($request->favorite == 'on') {
             $favorite = true;
         } else {
@@ -72,10 +72,10 @@ class AdminController extends Controller
             'img' => $request->img,
             'max_participants' => intval($request->max_participants),
             'favorite' => $favorite]);
-        
+
             Event::where('id','=',$id)->update($event);
             return redirect()->route('admin');
-        
+
     }
 
 
