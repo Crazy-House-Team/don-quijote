@@ -1,37 +1,25 @@
 
-main{
-    min-width: 100%;
 
-
-}
 .login-container{
-    padding-top: 120px;
-    width: 900px;
-    height: 1200px;
+    margin-top: 60px;
+    
     
 }
-.card-header{
-    height: 30px;
 
-}
 .card-body{
     height: 450px;
 
 
 }
-.card-body>form{
 
-    top: 30px;
-}
 form{
 
-    margin-top: 80px;
+    margin-top: 60px;
     
 
 }
-.form-check{
 
-   align-items: center;
-   align-content: center;
-    
+.py-4{
+
+    margin-top: 60px;
 }

@@ -25,5 +25,4 @@
         @endif
     @endforeach
 </div>
-@include('components.footer');
 @endsection
