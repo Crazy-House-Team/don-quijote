@@ -1,6 +1,8 @@
 @import './components/views/home-view.css';
 @import './components/auth/login-form.css';
 @import './components/layout/footer/footer.css';
+@import './components/auth/register-form.css';
+
 body{
     position: relative;
     background-color: white;
