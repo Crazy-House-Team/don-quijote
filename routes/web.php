@@ -47,7 +47,5 @@ Route::group([
     Route::get('/create',[AdminController::class, 'create'])->name('createEvent');
     Route::get('/edit/{id}', [AdminController::class, 'edit'])->name('editEvent');
     Route::patch('/event/{id}', [AdminController::class, 'update'])->name('updateEvent');
-
-
 });
 
