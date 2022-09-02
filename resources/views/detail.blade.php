@@ -11,7 +11,7 @@
 @endforeach
 
 
-<div class="m-auto w-1/2 bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700">
+<div class="m-auto max-w-xl sm:w-screen bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700">
     <img class="rounded-t-lg" src="{{$event->img}}" title="{{$event->title}}" src="{{$event->img}}" alt="{{$event->title}}" />
 
     <div class="p-5">

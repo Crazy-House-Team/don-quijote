@@ -3,15 +3,17 @@
     <div class="relative h-56 overflow-hidden rounded-lg md:h-96">
         @foreach ($events as $event)
             @if($event->favorite && $event->date > date('Y-m-d'))
+            <a href="{{ route('detail',$event->id) }}" class="flex-none inline-flex items-center">
                 <div class="hidden duration-700 ease-in-out wrap" data-carousel-item>
                     <div class="wrap-text">
                         <h2>{{$event->title}}<h2>
                         <h3>{{$event->resume}}</h3>
                     </div>    
-                    <div>
+                   <div>
                     <img src="{{$event->img}}" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="{{$event->title}}">
-                    </div>
+                   </div>
                 </div>
+            </a>
             @endif
         @endforeach
     </div>
