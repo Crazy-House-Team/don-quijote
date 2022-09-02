@@ -62,3 +62,45 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
+Don-Quijote
+El Consultorio Quinto Milenio es un proyecto diseñado por el equipo The Crazy House Team durante el bootcamp Factoria F5
+
+ # 🚀Descripción
+    En la pagina principal tenemos:
+    -Hogar: 
+        Es una página que sirve como punto de partida del sitio web. Se trata de la página web por defecto que se             carga cuando se visita una dirección que sólo contiene un nombre de dominio.
+    ##-Eventos pasados:
+        Es donde queda figurado los eventos que se celebraron y solo lo puede ver el administrador y no los usuarios. 
+    -Mis eventos:
+        Es donde quedan registrados los eventos a los que se apunta el usuario.
+    -Panel de administración:
+        Es donde puedes descartar, modificar y borar los evento los usuarios.
+        
+   ##Stack
+    Frontend: HTML CSS Bootstrap Plantillas que proporciona BLADE DE LARAVEL
+
+    Backend: PHP LARAVEL
+
+    Base de datos : Mysql
+    
+    ## Instalación
+    1º Desde MySQL debemos ejecutar o importar el archivo "database.sql".
+
+    2º Dentro del servidor Apache, clonaremos el repositorio mediante el comando:
+    ```
+    git clone git@github.com:Crazy-House-Team/Don-quijote.git
+    
+    3ºInstalar el Inpm Install
+    
+    4ºHacer un Composer Install
+    
+    5ºphp artisan migrate:fresh --seed
+    
+    6ºnpm run dev
+    
+    7ºAbrimos el otro gitbush
+    
+    8ºphp artisan serve
+    
+   
