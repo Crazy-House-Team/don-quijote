@@ -77,14 +77,14 @@ El Consultorio Quinto Milenio es un proyecto diseñado por el equipo The Crazy H
     -Panel de administración:
         Es donde puedes descartar, modificar y borar los evento los usuarios.
         
-   ##Stack
+   #Stack
     Frontend: HTML CSS Bootstrap Plantillas que proporciona BLADE DE LARAVEL
 
     Backend: PHP LARAVEL
 
     Base de datos : Mysql
     
-    ## Instalación
+    # Instalación
     1º Desde MySQL debemos ejecutar o importar el archivo "database.sql".
 
     2º Dentro del servidor Apache, clonaremos el repositorio mediante el comando:
