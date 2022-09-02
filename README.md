@@ -3,7 +3,7 @@ El Consultorio Don-quiote es un proyecto diseñado por el equipo The Crazy House
 
  # 🚀Descripción
     En la pagina principal tenemos:
-    -Hogar: 
+    -Home: 
         Es una página que sirve como punto de partida del sitio web. Se trata de la página web por defecto que se             carga cuando se visita una dirección que sólo contiene un nombre de dominio.
     ##-Eventos pasados:
         Es donde queda figurado los eventos que se celebraron y solo lo puede ver el administrador y no los usuarios. 
@@ -26,7 +26,7 @@ El Consultorio Don-quiote es un proyecto diseñado por el equipo The Crazy House
     ```
     3ºgit clone git@github.com:Crazy-House-Team/Don-quijote.git
     
-    4ºInstalar el Inpm Install
+    4ºInstalar el npm Install
     
     5ºHacer un Composer Install
     
