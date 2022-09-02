@@ -23,7 +23,7 @@
     <div id="app">
         @include('components.header')
 
-        <main class="py-2.5">
+        <main>
             @yield('content')
         </main>
     </div>
