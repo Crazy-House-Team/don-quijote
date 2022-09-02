@@ -89,18 +89,18 @@ El Consultorio Quinto Milenio es un proyecto diseñado por el equipo The Crazy H
 
     2º Dentro del servidor Apache, clonaremos el repositorio mediante el comando:
     ```
-    git clone git@github.com:Crazy-House-Team/Don-quijote.git
+    3ºgit clone git@github.com:Crazy-House-Team/Don-quijote.git
     
-    3ºInstalar el Inpm Install
+    4ºInstalar el Inpm Install
     
-    4ºHacer un Composer Install
+    5ºHacer un Composer Install
     
-    5ºphp artisan migrate:fresh --seed
+    6ºphp artisan migrate:fresh --seed
     
-    6ºnpm run dev
+    7ºnpm run dev
     
-    7ºAbrimos el otro gitbush
+    8ºAbrimos el otro gitbush
     
-    8ºphp artisan serve
+    9ºphp artisan serve
     
    
