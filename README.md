@@ -34,7 +34,7 @@ El Consultorio Don-quiote es un proyecto diseñado por el equipo The Crazy House
     
     7ºnpm run dev
     
-    8ºAbrimos el otro gitbush
+    8ºAbrimos otra terminal
     
     9ºphp artisan serve
     
