@@ -1,4 +1,11 @@
 .card{
     margin-top: 100px;
+    padding: auto;
 
 }
+.form-register{
+    padding: auto;
+    margin: auto;
+    /*font-family: 'Courier New', Courier, monospace;*/
+}
+

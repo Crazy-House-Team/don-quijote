@@ -8,6 +8,9 @@
                 <div class="card-header">{{ __('Register') }}</div>
 
                 <div class="card-body">
+
+                <div class="form-register">
+
                     <form method="POST" action="{{ route('register') }}">
                         @csrf
 
@@ -63,7 +66,8 @@
 
                         <div class="row mb-0">
                             <div class="col-md-6 offset-md-4">
-                                <button type="submit" class="btn btn-primary">
+                                <!--Register Btn Style Changed -->
+                                <button type="submit" class="bg-blue-400 hover:bg-blue-700 text-white font-bold py-2 px-2 rounded">
                                     {{ __('Register') }}
                                 </button>
                             </div>

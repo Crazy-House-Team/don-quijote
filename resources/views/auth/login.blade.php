@@ -8,12 +8,13 @@
                 <div class="card-header">{{ __('Login') }}</div>
 
                 <div class="card-body">
-
+                    <!--Imagen por arreglar
                     <div class="image-login">
                         <img src="/img/verticalbooks.jpg">
     
-                    </div>
+                    </div>-->
                     
+
                     <div class="form-login">
                         <form method="POST" action="{{ route('login') }}"> 
                             @csrf
@@ -60,7 +61,8 @@
 
                             <div class="row mb-0">
                                 <div class="col-md-8 offset-md-4">
-                                    <button type="submit" class="btn btn-primary">
+                                    <!--Login Btn Style Changed-->
+                                    <button type="submit" class="bg-blue-400 hover:bg-blue-700 text-white font-bold py-2 px-2 rounded">
                                         {{ __('Login') }}
                                     </button>
 

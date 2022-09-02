@@ -1,32 +1,31 @@
-
-
 .login-container{
     max-height: 60vw;
     margin: auto;
     padding: auto;
     
-    
 }
-
 .card-body{
-    height: 580px;
-    max-height: 40vw;
-    
-
-
-}
+    max-height: 100%;
+}  
 .image-login{
-    height: 720px;
-    width: 360px;
+    min-height: 360px;
+    min-width: 180px;
+    max-width: 720px;
+    max-height: 360px;
     min-block-size: auto;
-    left: 120px;
-    max-block-size: 40%;
+    left: 600px;
 }
 .image-login>img{
-    width: 100%;
+    width: 33%;
+    padding: auto;
+    margin-right: 360px;
 }
 .form-login{
-    margin-left: 100px;
-    width: 100%;
+    padding: auto;
+    margin: auto;
     
 }
+label {
+    padding: 12px 12px 12px 0;
+    display: inline-block;
+  }
