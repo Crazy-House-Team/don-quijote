@@ -21,39 +21,46 @@ class DatabaseSeeder extends Seeder
             'title' => 'Cocina creativa. Del microondas al horno',
             'favorite' => true,
             'date' => '2024-08-12',
+            'img' => '/img/img_2.jpeg'
         ]);
         Event::factory()->create([
             'title' => 'Escanciador de sidra',
             'favorite' => true,
             'date' => '2022-11-12',
+            'img' => '/img/img_3.jpeg'
         ]);
         Event::factory()->create([
             'title' => 'Instalación de Windows',
             'favorite' => true,
             'date' => '2023-08-12',
+            'img' => '/img/img_1.jpeg'
         ]);
         Event::factory()->create([
             'title' => 'Creación de guiones de películas',
             'favorite' => true,
             'date' => '2025-08-12',
+            'img' => '/img/img_5.jpeg'
         ]);
 
         Event::factory()->create([
             'title' => 'Creación de guiones para juegos',
             'favorite' => false,
             'date' => '2025-08-12',
+            'img' => '/img/img_6.jpeg'
         ]);
 
         Event::factory()->create([
             'title' => 'Iniciación a la programación',
             'favorite' => false,
             'date' => '2022-09-03',
+            'img' => '/img/img_7.jpeg'
         ]);
 
         Event::factory()->create([
             'title' => 'Autoayuda. Superación de estres',
             'favorite' => false,
             'date' => '2025-08-12',
+            'img' => '/img/img_8.jpeg'
         ]);
 
         Event::factory(5)->create([
