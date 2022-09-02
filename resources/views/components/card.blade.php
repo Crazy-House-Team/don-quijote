@@ -1,7 +1,7 @@
 
 <div class="flex items-center bg-white rounded-lg border shadow-md flex-row w-full hover:bg-gray-100 ">
-    <div class="hidden w-full h-full rounded-l-lg md:flex bg-cover bg-center " style="background-image: url('{{ $event->img }}');">
-
+    <div class="hidden w-full h-full rounded-l-lg md:flex bg-cover bg-center " 
+    style="background-image: url('{{ $event->img }}');">
     </div>
 
     <div class="flex flex-col justify-between p-4 h-full w-max w-full leading-normal">
