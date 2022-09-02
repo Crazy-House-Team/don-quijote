@@ -1,5 +1,5 @@
 #Don-Quijote
-El Consultorio Don-quiote es un proyecto diseñado por el equipo The Crazy House Team durante el bootcamp Factoria F5
+ Es un proyecto diseñado por el equipo The Crazy House Team durante el bootcamp Factoria F5
 
  # 🚀Descripción
     
