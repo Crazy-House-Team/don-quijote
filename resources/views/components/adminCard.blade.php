@@ -8,7 +8,7 @@
                 </svg>
             </button>
         </h2>
-        <div id="accordion-flush-body-{{ $event->id }}" class=" p-2.5" aria-labelledby="accordion-flush-heading-{{ $event->id }}">
+        <div id="accordion-flush-body-{{ $event->id }}" class=" p-2.5" style="background-color: rgb(255, 255, 255); aria-labelledby="accordion-flush-heading-{{ $event->id }}">
             <div class="py-5 font-light">
                 <h3 class="mb-2 text-gray-500 dark:text-gray-400">{{ $event->resume }}</h3>
                 <p class="mb-2 text-gray-500 dark:text-gray-400">{{ $event->description }}</p>

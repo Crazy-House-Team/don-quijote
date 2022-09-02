@@ -5,7 +5,7 @@
 
 body{
     position: relative;
-    background-color: white;
+    background-color:#EDF2F7;
     width: 100vw;
     min-height: 100vh;
     margin: 0 auto;
@@ -16,7 +16,7 @@ body{
 main{
     min-width: 100%;
     min-height: 100vh;
-    background-color: #EDF2F7;
+    background-color: #f6f6f6;
     padding: 0  2rem;
 }
 
