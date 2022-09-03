@@ -14,12 +14,17 @@
             <div class="p-3 bg-white font-light rounded mb-2 border border-gray-200">
                 <div class="flex justify-between items-end mb-3 border-b border-gray-200">
                     <div class="flex space-x-4 mb-3">
-                        <button type="button" data-modal-toggle="modal-delete-{{ $event->id }}" class=" text-white bg-red-400 hover:bg-red-700 text-white font-bold w-24 py-2 px-2 rounded">
+                        <button type="button" data-modal-toggle="modal-delete-{{ $event->id }}" 
+                        class="bg-red-400 hover:bg-red-700 text-white font-bold w-24 py-2 px-2 rounded">
                             Borrar
                         </button>
-                        <button type="button" class="bg-blue-400 hover:bg-blue-700 text-white font-bold py-2 px-2 rounded w-24">
-                            <a href="{{route('editEvent',$event->id)}}" class='no-underline text-white font-bold '>Modificar</a>
-                        </button>
+                        
+                        <a href="{{route('editEvent',$event->id)}}">
+                            <button type="button" class="bg-blue-400 hover:bg-blue-700 text-white font-bold py-2 px-2 rounded w-24">    
+                            Modificar
+                            </button>
+                        </a>
+                        
                     </div>
                     <label for="default-toggle-{{$event->id}}" class="inline-flex relative py-0 items-center cursor-pointer mb-3">
                         <span class="mr-2">Destacado </span>
