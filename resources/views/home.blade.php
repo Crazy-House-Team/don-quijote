@@ -3,10 +3,14 @@
 @section('content')
 <div class="text-center mt-2.5 mb-3">
 <h1 class= "mt-2 mb-2">Asociación Cultural Don Quijote</h1>
-<p class=" text-justify-center mt-3 mb-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque recusandae natus porro obcaecati accusamus doloremque totam, et mollitia minus consequatur pariatur fuga ipsa modi architecto error ad! Nam, quo unde.
-    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eligendi placeat unde facere quaerat dolore eum sapiente labore amet error voluptas nobis doloremque quidem rem, deserunt ut incidunt! Sed, eius dolor!
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Et, omnis quas culpa at optio, dolores ea voluptates nostrum voluptatum doloribus officia aut quisquam, voluptatibus velit doloremque consequatur neque beatae libero!
-</p>
+<p class=" text-justify-center mt-3 mb-3">La Asociación Cultural Don Quijote es una agrupación sin 
+    ánimo de lucro que apoya la lectura, la creación literaria y la cultura en general. 
+    Nuestro objetivo es fomentar la cultura y la creatividad. Tenemos en común la afición y el 
+    gusto de escribir, así como la promoción de artistas y autores. 
+    Como asociación cultura moderna, no nos olvidamos del mundo diguital y disponemos de talleres
+    de iniciación a tecnología digitales. En definitiva, proponemos talleres que fomenten la cultura, el arte,
+    el arte digital, y cualquier otro proyecto que implique la socialización.
+    
 </div>
 
 @include('components.carousel')
