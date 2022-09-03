@@ -12,6 +12,20 @@
         </h2>
         <div id="accordion-flush-body-{{ $event->id }}" class="hidden" aria-labelledby="accordion-flush-heading-{{ $event->id }}">
             <div class="p-3 bg-white font-light rounded mb-2 border border-gray-200">
+                <div class="flex justify-between items-end mb-3 border-b border-gray-200">
+                    <div class="flex space-x-4 mb-3">
+                        <button type="button" data-modal-toggle="modal-delete-{{ $event->id }}" class=" text-white bg-red-400 hover:bg-red-700 text-white font-bold w-24 py-2 px-2 rounded">
+                            Borrar
+                        </button>
+                        <button type="button" class="bg-blue-400 hover:bg-blue-700 text-white font-bold py-2 px-2 rounded w-24">
+                            <a href="{{route('editEvent',$event->id)}}" class='no-underline text-white font-bold '>Modificar</a>
+                        </button>
+                    </div>
+                    <label for="default-toggle-{{$event->id}}" class="inline-flex relative py-0 items-center cursor-pointer mb-3">
+                        <span class="mr-2">Destacado </span>
+                        <input type="checkbox" id='default-toggle-{{$event->id}}' disabled {{($event->favorite == true ? 'checked' : '')}}>
+                    </label>
+                </div>
                 <h3 class="mb-2 leading-9 text-gray-500">{{ $event->resume }}</h3>
                 <p class="mb-2 leading-6 text-gray-500">{{ $event->description }}</p>
                 <p class="mb-2 leading-9 text-gray-500">
@@ -23,21 +37,6 @@
                 <p class="mb-2 leading-9  text-gray-500">
                     <span class="text-gray-700 font-bold">Fecha y hora: </span> {{ date('d-m-Y',strtotime($event->date)) }} a las {{date('H:i', strtotime($event->time))}}
                 </p>
-
-                <div class="flex justify-between items-end">
-                    <div class="flex space-x-4">
-                        <button type="button" data-modal-toggle="modal-delete-{{ $event->id }}" class=" text-white bg-red-400 hover:bg-red-700 text-white font-bold w-24 py-2 px-2 rounded">
-                            Borrar
-                        </button>
-                        <button type="button" class="bg-blue-400 hover:bg-blue-700 text-white font-bold py-2 px-2 rounded w-24">
-                            <a href="{{route('editEvent',$event->id)}}" class='no-underline text-white font-bold '>Modificar</a>
-                        </button>
-                    </div>
-                    <label for="default-toggle-{{$event->id}}" class="inline-flex relative py-0 items-center cursor-pointer">
-                        <span>Destacado </span>
-                        <input type="checkbox" id='default-toggle-{{$event->id}}' disabled {{($event->favorite == true ? 'checked' : '')}}>
-                    </label>
-                </div>
             </div>
         </div>
     </div>
