@@ -2,7 +2,7 @@
 
 @section('content')
 <div class="text-center mt-2.5 mb-3">
-    <h1 class= "mt-2 mb-2">Asociación Cultural Don Quijote</h1>
+    <h1 class="mt-2 mb-2">Asociación Cultural Don Quijote</h1>
     <p class=" text-justify-center mt-3 mb-3">La Asociación Cultural Don Quijote es una agrupación sin
         ánimo de lucro que apoya la lectura, la creación literaria y la cultura en general.
         Nuestro objetivo es fomentar la cultura y la creatividad. Tenemos en común la afición y el
@@ -18,16 +18,15 @@
 <div class="grid grid-cols-1 gap-4 md:grid-cols-2  auto-rows-max">
 
     @foreach ($events as $event)
-        @if($event->date > date('Y-m-d'))
-                @php $suscribed = false @endphp
-            @foreach( $suscriptions as $suscription )
-                @if($suscription->id == $event->id)
-                    @php $suscribed = true @endphp
-                @endif
-            @endforeach
 
-            @include('components.card')
-        @endif
+        @php $suscribed = false @endphp
+        @foreach( $suscriptions as $suscription )
+            @if($suscription->id == $event->id)
+                @php $suscribed = true @endphp
+            @endif
+        @endforeach
+
+        @include('components.card')
     @endforeach
 
 </div>

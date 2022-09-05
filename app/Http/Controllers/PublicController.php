@@ -7,7 +7,7 @@ use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
-class HomeController extends Controller
+class PublicController extends Controller
 {
     /**
      * Create a new controller instance.
@@ -98,7 +98,8 @@ class HomeController extends Controller
         return \view('myEvents', \compact('events'));
     }
 
-    private function getNumberOfAvailablePlaces($eventId) {
+    private function getNumberOfAvailablePlaces($eventId)
+    {
         $eventsArray = Event::select()
             ->where('id', $eventId)
             ->withCount('users')
@@ -109,5 +110,4 @@ class HomeController extends Controller
 
         return $availablePlaces;
     }
-
 }
