@@ -20,12 +20,14 @@
         <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Lugar del evento : {{$event->address}} - {{$event->place}}</p>
         <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Fecha y hora : 📅 {{ date('d-m-Y',strtotime($event->date)) }} / ⏰ {{date('H:i', strtotime($event->time))}}</p>
         <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">{{$event->max_participants - $event->users_count}} plazas disponibles</p>
+    </div>
+    <div class="flex justify-center pb-5">
         @if(isset($suscribed)
             && !$suscribed
             && $event->max_participants - $event->users_count > 0
             && $event->date > date('Y-m-d'))
-        <a href="{{route('suscribe', $event->id)}}">
-            <button type="button" class="bg-blue-400 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+        <a href="{{route('suscribe', $event->id)}}" class="text-white font-bold">
+            <button type="button" class="bg-blue-400 hover:bg-blue-700 py-2 px-4 rounded">
             Me apunto 
             </button>
         </a>

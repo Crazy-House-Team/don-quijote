@@ -10,4 +10,7 @@
         @endif
     @endforeach
 </div>
+<div class="flex justify-center pt-5">
+    {{$events->links()}}
+</div>
 @endsection

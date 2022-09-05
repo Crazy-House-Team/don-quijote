@@ -23,52 +23,6 @@ class DatabaseSeeder extends Seeder
             'max_participants' => 1,
         ]);
         Event::factory()->create([
-            'title' => 'Cocina creativa. Del microondas al horno',
-            'favorite' => true,
-            'date' => '2024-08-12',
-            'img' => '/img/img_2.jpeg'
-        ]);
-        Event::factory()->create([
-            'title' => 'Escanciador de sidra',
-            'favorite' => true,
-            'date' => '2022-11-12',
-            'img' => '/img/img_32.jpg'
-        ]);
-        Event::factory()->create([
-            'title' => 'Instalación de Windows',
-            'favorite' => true,
-            'date' => '2023-08-12',
-            'img' => '/img/img_1.jpeg'
-        ]);
-        Event::factory()->create([
-            'title' => 'Creación de guiones de películas',
-            'favorite' => true,
-            'date' => '2025-08-12',
-            'img' => '/img/img_5.jpeg'
-        ]);
-
-        Event::factory()->create([
-            'title' => 'Creación de guiones para juegos',
-            'favorite' => false,
-            'date' => '2025-08-12',
-            'img' => '/img/img_6.jpeg'
-        ]);
-
-        Event::factory()->create([
-            'title' => 'Iniciación a la programación',
-            'favorite' => false,
-            'date' => '2022-09-03',
-            'img' => '/img/img_7.jpeg'
-        ]);
-
-        Event::factory()->create([
-            'title' => 'Autoayuda. Superación de estres',
-            'favorite' => false,
-            'date' => '2025-08-12',
-            'img' => '/img/img_8.jpeg'
-        ]);
-
-        Event::factory()->create([
             'title' => 'Festival de la Manzana',
             'resume' => 'Festival.',
             'description' => 'Se llevan a cabo diferentes actividades para todos los públicos, entre las que destaca su famosa exposición de manzanas, el mercado de otoño o el tren de la manzana.',
@@ -129,7 +83,7 @@ class DatabaseSeeder extends Seeder
             'description' => 'En este taller, realizaremos ambietadores solidos de cera de soja.',
             'place' => 'LA CÓSMICA ',
             'address' => 'C/ Instituto 23, Gijón.',
-            'date' =>'2022-09-15', 
+            'date' =>'2022-09-05', 
             'time' => '17:00 ',
             'img' => '/img/img_15.jpg',
             'favorite' => false,
@@ -140,7 +94,7 @@ class DatabaseSeeder extends Seeder
         'description' => 'Los pequeños bocados para acompañar la bebida, o sin ella, serán una vez más los grandes protagonistas del certamen que pondrá el punto y final del verano gastronómico de Avilés.',
         'place' => 'Casco Antiguo.',
         'address' => 'Avilés - Asturias.',
-        'date' =>'2022-09-11', 
+        'date' =>'2022-09-01', 
         'time' => '10:00 ',
         'img' => '/img/img_16.jpg',
         'favorite' => false,
@@ -197,7 +151,7 @@ class DatabaseSeeder extends Seeder
             'description' => 'II Concurso de Gaiter@s Gelu Cuervo.Final VI Concursu Sidre Caseru y preba popular.Ronda previa VI Concursu Sidre Caseru. Noche Folk: Felpeyu, Baxel y Abéu .Nueche de DJ’s: DJ Juanra + Basi.',
             'place' => 'Plazoleta Rula',
             'address' => ' Plazoleta Rula, Ribadesella',
-            'date' =>'2022-09-11', 
+            'date' =>'2022-08-31', 
             'time' => '17:00 ',
             'img' => '/img/img_22.jpg',
             'favorite' => false,
@@ -208,7 +162,7 @@ class DatabaseSeeder extends Seeder
             'description' => 'Mercado Artesano y Ecológico junto con las actividades y talleres,que permiten a gijoneses y turistas acercarse a la cultura y realidad asturiana de una forma participativa y didáctica. ',
             'place' => 'Plaza Mayor',
             'address' => 'Plaza Mayor - Gijón.',
-            'date' =>'2022-09-11', 
+            'date' =>'2022-10-01', 
             'time' => '11:00 ',
             'img' => '/img/img_23.jpg',
             'favorite' => true,

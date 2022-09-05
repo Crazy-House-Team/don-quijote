@@ -18,10 +18,20 @@ class EventController extends Controller
     {
         //
         $events = Event::select()
-            ->where('date', '>', \getdate())
+        ->where('date', '>', \now())
+        ->withCount('users')
+        ->orderBy('date', 'asc')
+        ->get();
+        return $events;
+    }
+
+    public function indexOld()
+    {
+        //
+        $events = Event::select()->where('date','<=',\now())
             ->withCount('users')
-            ->orderBy('date', 'asc')
-            ->get();
+            ->orderBy('date','desc')
+            ->paginate(6);
 
         return $events;
     }
