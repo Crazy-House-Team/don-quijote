@@ -12,8 +12,9 @@
 
 
 <div class="m-auto max-w-xl sm:w-screen bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700">
-    <img class="rounded-t-lg" src="{{$event->img}}" title="{{$event->title}}" src="{{$event->img}}" alt="{{$event->title}}" />
-
+    <div>
+        <img class="rounded-t-lg w-full" src="{{$event->img}}" title="{{$event->title}}" src="{{$event->img}}" alt="{{$event->title}}" />
+    </div>
     <div class="p-5">
         <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{{$event->title}}</h5>
         <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">{{$event->description}}</p>
