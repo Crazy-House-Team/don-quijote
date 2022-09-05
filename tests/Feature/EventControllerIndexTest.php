@@ -19,17 +19,34 @@ class EventControllerIndexTest extends TestCase
 
     public function test_homepage_route_is_charging()
     {
+        $this->withExceptionHandling();
 
         $response = $this->get('/');
         $response->assertStatus(200)->assertSee('Asociación Cultural Don Quijote');
     }
 
-    public function test_all_events_are_listed_in_home_page()
+    public function test_active_events_are_listed_in_home_page()
     {
+        $this->withExceptionHandling();
+
         $events = Event::factory()->create([
             "title" => "title-test",
+            "date" => '2023-01-01',
         ]);
         $response = $this->get('/');
-        $response->assertStatus(200)->assertSee('title-test');
+        $response->assertSee('title-test');
     }
+
+    public function test_old_events_are_listed_in_home_page()
+    {
+        $this->withExceptionHandling();
+        
+        $events = Event::factory()->create([
+            "title" => "title-test",
+            "date" => '1991-01-01',
+        ]);
+        $response = $this->get('/old');
+        $response->assertSee('title-test');
+    }
+
 }
