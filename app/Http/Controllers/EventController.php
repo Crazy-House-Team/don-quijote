@@ -31,7 +31,7 @@ class EventController extends Controller
         $events = Event::select()->where('date','<=',\now())
             ->withCount('users')
             ->orderBy('date','desc')
-            ->paginate(6);
+            ->simplePaginate(6);
 
         return $events;
     }
