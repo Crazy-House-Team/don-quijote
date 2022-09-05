@@ -35,9 +35,11 @@ class DatabaseSeeder extends Seeder
             'favorite' => true,
         ]);
         Event::factory()->create([
-            'title' => 'Fiesta de Halloween para niños',
-            'resume' => 'Fiesta de Halloween para niños Esfoyaza y Magüestu.',
-            'description' => 'En este taller, realizaremos disfraces y preparaemos el tradicional Magüestu.',
+            'title' => 'Fiestes de Samaín',
+            'resume' => 'Andai de día, que la nueche ye mía...',
+            'description' => 'Hoy una cosina prestosa, os queremos contar, y es que en esta época, algo tenebrosa, 
+            una fiesta se suele celebrar, el nombre es Samaín, que no Halloween, porque nosostros no somos americanos,
+            sino asturianos, donde la cultura celta, queda marcada, con esta celebración, representada.',
             'place' => 'Sede Vecinal',
             'address' => 'C/ Instituto 23, Gijón.',
             'date' =>'2022-10-29', 

@@ -55,5 +55,9 @@ main{
 .wrap-text>h3{
     position: absolute;
     bottom: 50px;
+    font-weight: bold;
     font-size: calc(1em + 1vw);
+    -webkit-text-fill-color: white;
+   -webkit-text-stroke-width: 0.08vw;
+   -webkit-text-stroke-color: rgb(71, 71, 71);
 }
