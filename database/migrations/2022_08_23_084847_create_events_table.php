@@ -18,8 +18,8 @@ return new class extends Migration
             $table->string('title', 100);
             $table->string('resume', 150);
             $table->string('description', 500);
-            $table->string('place', 50);
-            $table->string('address', 75);
+            $table->string('place', 150);
+            $table->string('address', 150);
             $table->date('date');
             $table->time('time', 2);
             $table->string('img', 250);
