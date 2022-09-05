@@ -19,7 +19,7 @@
 <div class="grid grid-cols-1 gap-4 md:grid-cols-2  auto-rows-max">
 
     @foreach ($events as $event)
-        @if(!$event->favorite && $event->date > date('Y-m-d'))
+        @if($event->date > date('Y-m-d'))
                 @php $suscribed = false @endphp
             @foreach( $suscriptions as $suscription )
                 @if($suscription->id == $event->id)

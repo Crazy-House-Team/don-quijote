@@ -38,8 +38,7 @@ class HomeController extends Controller
     public function old()
     {
         $eventController = new EventController();
-        $events = $eventController->index();
-
+        $events = $eventController->indexOld();
         $suscriptions = [];
         return view('pastEvents', compact('events', 'suscriptions'));
     }

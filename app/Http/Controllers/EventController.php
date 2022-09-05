@@ -17,7 +17,14 @@ class EventController extends Controller
     public function index()
     {
         //
-        $events = Event::select()->where('date', '>', \getdate())->orderBy('date', 'asc')->get();
+        $events = Event::select()->where('date','>',\now())->orderBy('date','asc')->get();
+        return $events;
+    }
+
+    public function indexOld()
+    {
+        //
+        $events = Event::select()->where('date','<=',\now())->orderBy('date','desc')->paginate(4);
         return $events;
     }
 
