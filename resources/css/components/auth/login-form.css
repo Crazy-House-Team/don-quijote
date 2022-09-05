@@ -1,0 +1,31 @@
+.login-container{
+    max-height: 60vw;
+    margin: auto;
+    padding: auto;
+    
+}
+.card-body{
+    max-height: 100%;
+}  
+.image-login{
+    min-height: 360px;
+    min-width: 180px;
+    max-width: 720px;
+    max-height: 360px;
+    min-block-size: auto;
+    left: 600px;
+}
+.image-login>img{
+    width: 33%;
+    padding: auto;
+    margin-right: 360px;
+}
+.form-login{
+    padding: auto;
+    margin: auto;
+    
+}
+label {
+    padding: 12px 12px 12px 0;
+    display: inline-block;
+  }

@@ -1,0 +1,63 @@
+@import './components/auth/login-form.css';
+@import './components/auth/register-form.css';
+@import './components/layout/footer/footer.css';
+
+
+body{
+    position: relative;
+    background-color:#EDF2F7;
+    width: 100vw;
+    min-height: 100vh;
+    margin: 0 auto;
+    max-width: 1200px;
+    font-size: 12px;
+}
+
+main{
+    min-width: 100%;
+    min-height: 100vh;
+    background-color: #f6f6f6;
+    padding: 2rem 2rem 6rem 2rem;
+}
+
+#app {
+    min-height: 100vh;
+}
+
+.py-4 {
+    margin: 0;
+}
+
+.wrap{
+    display: flex;
+}
+
+.wrap-text{
+    color: white;
+    text-align: left;
+    margin: 1rem;
+    width: 70%;
+    text-shadow:
+    0 0 calc(0.3em + 1vw) #999898;
+     z-index: 99;
+}
+
+.wrap-text>h2{
+    font-family: Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: calc(3em + 1vw);
+   -webkit-text-fill-color: white;
+   -webkit-text-stroke-width: 0.08vw;
+   -webkit-text-stroke-color: rgb(71, 71, 71);
+}
+
+.wrap-text>h3{
+    position: absolute;
+    bottom: 50px;
+    font-weight: bold;
+    font-size: calc(1em + 1vw);
+    -webkit-text-fill-color: white;
+   -webkit-text-stroke-width: 0.08vw;
+   -webkit-text-stroke-color: rgb(71, 71, 71);
+}

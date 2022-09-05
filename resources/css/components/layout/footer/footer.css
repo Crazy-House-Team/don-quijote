@@ -1,0 +1,10 @@
+footer {
+    position: absolute;
+    bottom: 0;
+    height: 70px;
+    max-width: 1200px;
+}
+
+.footer-logo {
+    width: 55px;
+}
