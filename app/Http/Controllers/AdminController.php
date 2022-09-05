@@ -24,8 +24,9 @@ class AdminController extends Controller
     public function index()
     {
         $eventController = new EventController();
-        $events = $eventController->index();
-        return view('admin',compact('events'));
+        $currentEvents = $eventController->index();
+        $oldEvents = $eventController->indexOld();
+        return view('admin',compact('currentEvents','oldEvents'));
     }
 
     public function destroy($id) {
