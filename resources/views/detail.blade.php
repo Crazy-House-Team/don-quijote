@@ -20,7 +20,10 @@
         <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Lugar del evento : {{$event->address}} - {{$event->place}}</p>
         <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Fecha y hora : 📅 {{ date('d-m-Y',strtotime($event->date)) }} / ⏰ {{date('H:i', strtotime($event->time))}}</p>
         <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">{{$event->max_participants - count($suscriptions)}} plazas disponibles</p>
-        @if(isset($suscribed) && !$suscribed && $event->date > date('Y-m-d'))
+        @if(isset($suscribed)
+        && !$suscribed
+        && $event->max_participants - count($suscriptions)
+        && $event->date > date('Y-m-d'))
         <a href="{{route('suscribe', $event->id)}}">
             <button type="button" class="bg-blue-400 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
             Me apunto

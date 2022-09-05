@@ -25,12 +25,16 @@ class HomeController extends Controller
      */
     public function index()
     {
+        $user = User::find(Auth::id());
+
         $eventController = new EventController();
         $events = $eventController->index();
         $suscriptions = [];
+
         if (Auth::check()) {
-            $suscriptions = $eventController->getSuscriptions();
+            $suscriptions = $eventController->getSuscriptions($user);
         }
+
         return view('home', compact('events', 'suscriptions'));
     }
 
@@ -46,31 +50,35 @@ class HomeController extends Controller
 
     public function show($id)
     {
+        $user = User::find(Auth::id());
+
         $eventController = new EventController();
         $event = $eventController->show($id);
         $suscriptions = [];
         if (Auth::check()) {
-            $suscriptions = $eventController->getSuscriptions();
+            $suscriptions = $eventController->getSuscriptions($user);
         }
         return view('detail', compact('event', 'suscriptions'));
     }
 
-    public function suscribe($id)
+    public function suscribe($eventId)
     {
+        $user = User::find(Auth::id());
+        $event = Event::find($eventId);
         $suscribed = false;
         $eventController = new EventController();
-        $suscriptions = $eventController->getSuscriptions();
-
+        $suscriptions = $eventController->getSuscriptions($user);
+        $availablePlaces = $event->max_participants - \count($suscriptions);
+        
         foreach ($suscriptions as $suscription) {
-            if ($suscription->id == $id) {
+            if ($suscription->id == $eventId) {
                 $suscribed = true;
             }
         }
 
-        if (!$suscribed) {
-            $events = $eventController->suscribe($id);
+        if (!$suscribed && $availablePlaces > 0) {
+            $events = $eventController->suscribe($eventId);
         }
-
 
         return \redirect()->back();
     }
@@ -84,9 +92,11 @@ class HomeController extends Controller
 
     public function getSuscriptions()
     {
+        $user = User::find(Auth::id());
         $eventController = new EventController();
-        $events = $eventController->getSuscriptions();
+        $events = $eventController->getSuscriptions($user);
 
         return \view('myEvents', \compact('events'));
     }
+
 }
