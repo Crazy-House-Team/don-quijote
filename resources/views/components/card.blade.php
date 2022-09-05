@@ -7,6 +7,7 @@
     <div class="flex flex-col justify-between p-4 h-full w-max w-full leading-normal">
         <h5 class="mb-2 text-xl font-bold tracking-tight text-gray-900 dark:text-white">{{$event->title}}</h5>
         <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">{{$event->resume}}</p>
+        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400 italic">📅 {{ date('d-m-Y',strtotime($event->date)) }}</p>
         <div class="flex justify-between items-end">
             <a href="{{ route('detail',$event->id) }}" class="flex-none inline-flex items-center">
                 Mas info...

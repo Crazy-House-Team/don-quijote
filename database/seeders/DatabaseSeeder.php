@@ -21,16 +21,6 @@ class DatabaseSeeder extends Seeder
             'title' => 'TEST',
             'date' => '2025-08-12',
             'max_participants' => 1,
-        ]);
-        Event::factory()->create([
-            'title' => 'Festival de la Manzana',
-            'resume' => 'Festival.',
-            'description' => 'Se llevan a cabo diferentes actividades para todos los públicos, entre las que destaca su famosa exposición de manzanas, el mercado de otoño o el tren de la manzana.',
-            'place' => 'Villaviciosa.',
-            'address' => 'Villaviciosa - Asturias.',
-            'date' =>'2023-10-12', 
-            'time' => '19:00 ',
-            'img' => '/img/img_10.jpg',
             'favorite' => false,
         ]);
         Event::factory()->create([
@@ -45,17 +35,6 @@ class DatabaseSeeder extends Seeder
             'favorite' => true,
         ]);
         Event::factory()->create([
-            'title' => 'La vendimia del vino de calidad de Cangas',
-            'resume' => 'CATAS, MERCADO, ARTESANÍA...',
-            'description' => 'La escenificación del transporte de la uva en un carro del país y la tradicional pisada de uva es uno de sus principales actos, que se complementa con catas, mercadillo, puestos de artesanía, venta de productos tradicionales y actividades para niños.',
-            'place' => 'Cangas del Narcea.',
-            'address' => 'Cangas del Narcea - Asturias.',
-            'date' =>'2022-10-07', 
-            'time' => '10:00 ',
-            'img' => '/img/img_12.jpg',
-            'favorite' => false,
-        ]);
-        Event::factory()->create([
             'title' => 'Fiesta de Halloween para niños',
             'resume' => 'Fiesta de Halloween para niños Esfoyaza y Magüestu.',
             'description' => 'En este taller, realizaremos disfraces y preparaemos el tradicional Magüestu.',
@@ -64,6 +43,41 @@ class DatabaseSeeder extends Seeder
             'date' =>'2022-10-29', 
             'time' => '17:00 ',
             'img' => '/img/img_13.jpg',
+            'favorite' => true,
+        ]);
+        Event::factory()->create([
+            'title' => 'La vendimia del vino de calidad de Cangas',
+            'resume' => 'CATAS, MERCADO, ARTESANÍA...',
+            'description' => 'La escenificación del transporte de la uva en un carro del país y la tradicional pisada de uva es uno de sus principales actos, que se complementa con catas, mercadillo, puestos de artesanía, venta de productos tradicionales y actividades para niños.',
+            'place' => 'Cangas del Narcea.',
+            'address' => 'Cangas del Narcea - Asturias.',
+            'date' =>'2022-10-07', 
+            'time' => '10:00 ',
+            'img' => '/img/img_12.jpg',
+            'favorite' => true,
+        ]);
+        Event::factory()->create([
+            'title' => 'Descubre el Centro Niemeyer',
+            'resume' => 'Eve Arnold, Inge Morath y Cristina García Rodero ',
+            'description' => 'Las visitas guiadas a Centro Niemeyer, son recorridos acompañados por un guía que, edificio a edificio, va desgranando la historia, curiosidades y eventos señalados en la única obra de Oscar Niemeyer en España.',
+            'place' => 'Centro Niemeyer.',
+            'address' => 'Av. del Zinc, s/n, 33490 Avilés, Asturias.',
+            'date' =>'2022-10-16', 
+            'time' => '11:00 ',
+            'img' => '/img/img_17.jpg',
+            'favorite' => true,
+        ]);
+        
+        
+        Event::factory()->create([
+            'title' => 'Festival de la Manzana',
+            'resume' => 'Festival de la Manzana y la Sidra.',
+            'description' => 'Se llevan a cabo diferentes actividades para todos los públicos, entre las que destaca su famosa exposición de manzanas, el mercado de otoño o el tren de la manzana.',
+            'place' => 'Villaviciosa.',
+            'address' => 'Villaviciosa - Asturias.',
+            'date' =>'2022-10-12', 
+            'time' => '19:00',
+            'img' => '/img/img_10.jpg',
             'favorite' => false,
         ]);
         Event::factory()->create([
@@ -78,7 +92,7 @@ class DatabaseSeeder extends Seeder
             'favorite' => false,
         ]);
 	   Event::factory()->create([
-            'title' => 'Ambietadores solidos de cera de soja',
+            'title' => 'Ambientadores solidos de cera de soja',
             'resume' => 'Taller.',
             'description' => 'En este taller, realizaremos ambietadores solidos de cera de soja.',
             'place' => 'LA CÓSMICA ',
@@ -100,17 +114,6 @@ class DatabaseSeeder extends Seeder
         'favorite' => false,
         ]);
         Event::factory()->create([
-            'title' => 'Descubre el Centro Niemeyer',
-            'resume' => 'Eve Arnold, Inge Morath y Cristina García Rodero ',
-            'description' => 'Las visitas guiadas a Centro Niemeyer, son recorridos acompañados por un guía que, edificio a edificio, va desgranando la historia, curiosidades y eventos señalados en la única obra de Oscar Niemeyer en España.',
-            'place' => 'Centro Niemeyer.',
-            'address' => 'Av. del Zinc, s/n, 33490 Avilés, Asturias.',
-            'date' =>'2022-10-16', 
-            'time' => '11:00 ',
-            'img' => '/img/img_17.jpg',
-            'favorite' => false,
-        ]);
-        Event::factory()->create([
             'title' => 'Tres mujeres Magnum',
             'resume' => 'Eve Arnold, Inge Morath y Cristina García Rodero ',
             'description' => 'Esta exposición es un homenaje a estas tres mujeres en la fotografía, que han roto los límites y los tópicos del oficio de fotógrafo, además de demostrar que la mujer sabe contar el mundo, representar la realidad y los sueños de la vida de hombres y mujeres.',
@@ -129,7 +132,7 @@ class DatabaseSeeder extends Seeder
             ',
             'place' => 'Mieres',
             'address' => 'Mieres - Asturias.',
-            'date' =>'2022-09-27', 
+            'date' =>'2022-08-27', 
             'time' => '10:00 ',
             'img' => '/img/img_20.jpg',
             'favorite' => false,
@@ -143,7 +146,7 @@ class DatabaseSeeder extends Seeder
             'date' =>'2022-09-11', 
             'time' => '17:00 ',
             'img' => '/img/img_21.jpg',
-            'favorite' => true,
+            'favorite' => false,
         ]);
         Event::factory()->create([
             'title' => 'La Plazoleta Rula de Ribadesella',
@@ -165,7 +168,7 @@ class DatabaseSeeder extends Seeder
             'date' =>'2022-10-01', 
             'time' => '11:00 ',
             'img' => '/img/img_23.jpg',
-            'favorite' => true,
+            'favorite' => false,
         ]);
         Event::factory()->create([
             'title' => 'Su Excelencia La Fabada.',
@@ -220,7 +223,7 @@ class DatabaseSeeder extends Seeder
             'date' =>'2022-09-04', 
             'time' => '19:00 ',
             'img' => '/img/img_31.jpg',
-            'favorite' => true,
+            'favorite' => false,
         ]);
         Event::factory()->create([
             'title' => 'Parque de la Prehistoria',
@@ -228,10 +231,10 @@ class DatabaseSeeder extends Seeder
             'description' => 'Programa de actividades: recorrido guiado por los cercados de animales .',
             'place' => 'Parque de la Prehistoria.',
             'address' => 'San Salvador de Alesga - Teverga - Asturias.',
-            'date' =>'2022-09-17', 
+            'date' =>'2022-07-17', 
             'time' => '11:00 ',
             'img' => '/img/img_33.jpg',
-            'favorite' => true,
+            'favorite' => false,
         ]);
         Event::factory()->create([
             'title' => 'Conoce nuestros osos.',
@@ -239,10 +242,10 @@ class DatabaseSeeder extends Seeder
             'description' => 'Visita guiada a la Casa del Oso de Proaza, donde se proyectará un breve vídeo, y un paseo por la Senda del Oso hasta llegar a los cercados donde habitan Paca y Molina.',
             'place' => 'Casa del Oso.',
             'address' => 'Proaza - Asturias.',
-            'date' =>'2022-09-07', 
+            'date' =>'2022-08-07', 
             'time' => '10:30 ',
             'img' => '/img/img_34.jpg',
-            'favorite' => true,
+            'favorite' => false,
         ]);
 
         Event::factory()->create([
@@ -251,10 +254,10 @@ class DatabaseSeeder extends Seeder
             'description' => 'Programa de rutas y visitas guiadas al patrimonio natural y cultural del concejo de Colunga y la Sierra del Sueve durante este verano.',
             'place' => 'El Centro de Interpretación de la Sierra del Sueve.',
             'address' => 'Colunga - Asturias.',
-            'date' =>'2022-09-08', 
+            'date' =>'2022-09-15', 
             'time' => '11:00 ',
             'img' => '/img/img_35.jpg',
-            'favorite' => true,
+            'favorite' => false,
         ]);
         Event::factory()->create([
             'title' => 'Meditación',
@@ -262,16 +265,10 @@ class DatabaseSeeder extends Seeder
             'description' => 'Aprende a gestionar las situaciones de stress atraves de la meditaión .',
             'place' => 'Centro Social Laviada.',
             'address' => 'C/Carlos Marx 24 - Gijón.',
-            'date' =>'2022-09-17', 
+            'date' =>'2022-08-17', 
             'time' => '17:00 ',
             'img' => '/img/img_37.jpg',
-            'favorite' => true,
-        ]);
-
-     
-
-        Event::factory(10)->create([
-            'img' => 'https://www.ukrgate.com/eng/wp-content/uploads/2021/02/The-Ukrainian-Book-Institute-Purchases-380.9-Thousand-Books-for-Public-Libraries1.jpeg',
+            'favorite' => false,
         ]);
 
         User::factory()->create([

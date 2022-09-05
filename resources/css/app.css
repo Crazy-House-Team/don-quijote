@@ -1,7 +1,7 @@
-@import './components/views/home-view.css';
 @import './components/auth/login-form.css';
-@import './components/layout/footer/footer.css';
 @import './components/auth/register-form.css';
+@import './components/layout/footer/footer.css';
+
 
 body{
     position: relative;
