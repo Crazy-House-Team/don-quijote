@@ -17,18 +17,13 @@ class EventController extends Controller
     public function index()
     {
         //
-        $events = Event::select()->where('date', '>', \getdate())->orderBy('date', 'asc')->get();
-        return $events;
-    }
+        $events = Event::select()
+            ->where('date', '>', \getdate())
+            ->withCount('users')
+            ->orderBy('date', 'asc')
+            ->get();
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        return view('newEvent');
+        return $events;
     }
 
     /**
@@ -71,8 +66,12 @@ class EventController extends Controller
      */
     public function show($id)
     {
-        $event = Event::find($id);
-        return $event;
+        $event = Event::select()
+            ->where('id', $id)
+            ->withCount('users')
+            ->get();
+
+        return $event[0];
     }
 
     /**
@@ -125,12 +124,9 @@ class EventController extends Controller
         $user->events()->detach($event);
     }
 
-    public function getSuscriptions()
+    public function getSuscriptions($user)
     {
-        $user = User::find(Auth::id());
-
         $events = $user->events;
         return $events;
     }
-
 }

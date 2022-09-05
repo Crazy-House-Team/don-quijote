@@ -1,6 +1,6 @@
 
 <div class="flex items-center bg-white rounded-lg border shadow-md flex-row w-full hover:bg-gray-100 ">
-    <div class="hidden w-full h-full rounded-l-lg md:flex bg-cover bg-center " 
+    <div class="hidden w-full h-full rounded-l-lg md:flex bg-cover bg-center "
     style="background-image: url('{{ $event->img }}');">
     </div>
 
@@ -11,7 +11,10 @@
             <a href="{{ route('detail',$event->id) }}" class="flex-none inline-flex items-center">
                 Mas info...
             </a>
-            @if(isset($suscribed) && !$suscribed && $event->date > date('Y-m-d'))
+            @if(isset($suscribed)
+                && !$suscribed
+                && $event->max_participants - $event->users_count > 0
+                && $event->date > date('Y-m-d'))
             <a href="{{ route('suscribe', $event->id) }}" class='text-white font-bold'>
                 <button type="button" class="flex-init bg-green-400 hover:bg-green-700 py-2 px-2 rounded">
                     Me apunto
