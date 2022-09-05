@@ -15,6 +15,8 @@ class EventControllerCreateTest extends TestCase
 
     public function test_new_event_form_cannot_be_accesed_by_non_admin_user()
     {
+        $this->withExceptionHandling();
+
         $response = $this->get(\route('createEvent'));
 
         $response->assertStatus(302);
@@ -22,6 +24,8 @@ class EventControllerCreateTest extends TestCase
 
     public function test_new_event_form_can_be_accesed_by_admin_user()
     {
+        $this->withExceptionHandling();
+
         $admin = User::factory()->create([
             'is_admin' => true,
         ]);
@@ -34,9 +38,9 @@ class EventControllerCreateTest extends TestCase
 
     public function test_new_events_cannot_be_created_by_non_admin_users()
     {
+        $this->withExceptionHandling();
+
         $response = $this->post(\route('storeEvent'));
         $response->assertStatus(302);
     }
-
-    
 }

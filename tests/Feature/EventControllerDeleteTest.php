@@ -19,6 +19,8 @@ class EventControllerDeleteTest extends TestCase
 
     public function test_events_cannot_be_deleted_by_non_admin_user()
     {
+        $this->withExceptionHandling();
+
         $event = Event::factory()->create();
 
         $this->assertCount(1, Event::all());
@@ -26,11 +28,12 @@ class EventControllerDeleteTest extends TestCase
         $response = $this->delete(\route('delete', $event->id));
 
         $this->assertCount(1, Event::all());
-
     }
 
     public function test_events_can_be_deleted_by_admin()
     {
+        $this->withExceptionHandling();
+
         $admin = User::factory()->create([
             'is_admin' => true,
         ]);
@@ -41,6 +44,5 @@ class EventControllerDeleteTest extends TestCase
         $response = $this->actingAs($admin)->delete(\route('delete', $event->id));
 
         $this->assertCount(0, Event::all());
-
     }
 }
