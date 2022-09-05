@@ -68,8 +68,8 @@ class HomeController extends Controller
         $suscribed = false;
         $eventController = new EventController();
         $suscriptions = $eventController->getSuscriptions($user);
-        $availablePlaces = $event->max_participants - \count($suscriptions);
-        
+        $availablePlaces = $this->getNumberOfAvailablePlaces($event->id);
+
         foreach ($suscriptions as $suscription) {
             if ($suscription->id == $eventId) {
                 $suscribed = true;
@@ -77,7 +77,7 @@ class HomeController extends Controller
         }
 
         if (!$suscribed && $availablePlaces > 0) {
-            $events = $eventController->suscribe($eventId);
+            $eventController->suscribe($eventId);
         }
 
         return \redirect()->back();
@@ -97,6 +97,18 @@ class HomeController extends Controller
         $events = $eventController->getSuscriptions($user);
 
         return \view('myEvents', \compact('events'));
+    }
+
+    private function getNumberOfAvailablePlaces($eventId) {
+        $eventsArray = Event::select()
+            ->where('id', $eventId)
+            ->withCount('users')
+            ->get();
+
+        $event = $eventsArray[0];
+        $availablePlaces = $event->max_participants - $event->users_count;
+
+        return $availablePlaces;
     }
 
 }

@@ -66,8 +66,12 @@ class EventController extends Controller
      */
     public function show($id)
     {
-        $event = Event::find($id);
-        return $event;
+        $event = Event::select()
+            ->where('id', $id)
+            ->withCount('users')
+            ->get();
+
+        return $event[0];
     }
 
     /**

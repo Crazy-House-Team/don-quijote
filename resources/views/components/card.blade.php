@@ -12,9 +12,9 @@
                 Mas info...
             </a>
             @if(isset($suscribed)
-            && !$suscribed
-            && $event->max_participants - count($suscriptions)
-            && $event->date > date('Y-m-d'))
+                && !$suscribed
+                && $event->max_participants - $event->users_count > 0
+                && $event->date > date('Y-m-d'))
             <a href="{{ route('suscribe', $event->id) }}" class='text-white font-bold'>
                 <button type="button" class="flex-init bg-green-400 hover:bg-green-700 py-2 px-2 rounded">
                     Me apunto
