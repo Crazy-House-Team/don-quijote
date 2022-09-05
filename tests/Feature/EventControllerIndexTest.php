@@ -19,6 +19,7 @@ class EventControllerIndexTest extends TestCase
 
     public function test_homepage_route_is_charging()
     {
+        $this->withExceptionHandling();
 
         $response = $this->get('/');
         $response->assertStatus(200)->assertSee('Asociación Cultural Don Quijote');
@@ -28,8 +29,9 @@ class EventControllerIndexTest extends TestCase
     {
         $events = Event::factory()->create([
             "title" => "title-test",
+            "date" => '2023-01-01',
         ]);
         $response = $this->get('/');
-        $response->assertStatus(200)->assertSee('title-test');
+        $response->assertSee('title-test');
     }
 }
