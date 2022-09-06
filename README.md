@@ -86,6 +86,8 @@ php artisan serve
 npm run dev
 ```
 
+Cargar base de datos con eventos predefinidos: `php artisan migrate:fresh --seed`
+
 ## Lanzar Tests
 
 `php artisan test`
