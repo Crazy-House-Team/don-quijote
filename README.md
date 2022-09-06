@@ -56,8 +56,9 @@ aceptación)
   - Apache HTTP Server
   - MySQL
   
-- **Gestor de dependencias:**
+- **Gestores de dependencias:**
   - Composer
+  - NPM
   
 # Requisitos técnicos
 
